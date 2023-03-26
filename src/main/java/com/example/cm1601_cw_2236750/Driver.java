@@ -1,7 +1,13 @@
 package com.example.cm1601_cw_2236750;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
+
 import java.io.*;
+import java.time.format.TextStyle;
 import java.util.Scanner;
+
+
 
 public class Driver {
     public String fileName;
@@ -37,44 +43,6 @@ public class Driver {
     }
 
     public void updateDriverData(String dataFieldName, String newData, String updateName) {
-//        if (dataFieldName.equals("driverNameUpdate")) {
-//
-////            try {
-//////                CreateFile tempFile = new CreateFile("TempFile","");
-//////                FileReader readFile = new FileReader("D:\\A1  sem2\\programming cw\\CM1601_CW_2236750\\src\\main\\java\\com\\example\\cm1601_cw_2236750\\Racing.txt");
-//////                FileWriter writeFile = new FileWriter("D:\\A1  sem2\\programming cw\\CM1601_CW_2236750\\src\\main\\java\\com\\example\\cm1601_cw_2236750\\TempFile.txt");
-//////                //now read the file line by line...
-////                int lineNum;
-////                String fileData = "";
-//////                while ((lineNum = readFile.read()) != -1) {
-//////                    String name = String.format("%.20s", (char)lineNum);
-//////                    String []line = (char)lineNum;
-//////                    if (name.equals(driverNameFind)){
-//////                        (char)lineNum[0:20]
-//////                    }
-//////                    // Storing every character in the string
-//////                    fileData += (char)lineNum;
-//////                }
-//////                writeFile.write(fileData);
-//////                readFile.close();
-//////                writeFile.close();
-//////                while (scanner.hasNextLine()) {
-//////                    String line = scanner.nextLine();
-//////                    lineNum++;
-//////                    String name = String.format("%.20s", line);
-//////                    if (name.equals(driverNameFind)) {
-//////                        line.replace(driverNameFind,newData);
-//////                        file.
-//////                    }
-//////                }
-////
-//////            }catch(FileNotFoundException e) {
-//////                        //handle this
-//////
-//////            } catch (IOException e) {
-//////                throw new RuntimeException(e);
-//////            }
-////        }
         if (dataFieldName.equals("driverNameUpdate")){
             try {
                 BufferedReader readFile = new BufferedReader(new FileReader("Racing.txt"));

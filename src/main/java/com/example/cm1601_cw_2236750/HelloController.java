@@ -8,10 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -43,6 +40,9 @@ public class HelloController{
     private Label promptDelete;
     @FXML
     private TextField driverToDelete;
+    @FXML
+    private TextArea position;
+
 
     private Stage stage;
     private Scene scene;
@@ -514,20 +514,20 @@ public class HelloController{
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
             alert.setHeaderText("Error in Driver name");
-            alert.setContentText("Make sure the driver's name length is within 20 letters!");
+            alert.setContentText("Make sure the driver name length is within 20 letters!");
             alert.showAndWait();
             driverToUpdate.clear();
         }
         try{
-            newCurrentPoints = String.format("%-15s",newData.getText());
+            newCurrentPoints = String.format("%-15s",Integer.parseInt(newData.getText()));
             if (newCurrentPoints.length() >15){
                 throw new  Exception();}
 
         } catch (Exception e){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver's team name");
-            alert.setContentText("A driver can't have so much points!");
+            alert.setHeaderText("Error in Current Points");
+            alert.setContentText("Make sure the current points length is an integer within 20 letters!");
             alert.showAndWait();
             newData.clear();
 
@@ -604,6 +604,12 @@ public class HelloController{
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+    public void disPos(){
+        position.appendText("Driver | Age | Team Name | Car Type | Current Points | Position\n");
+        DriverTableDisplay table = new DriverTableDisplay("Racing.txt");
+        position.appendText(table.driverSort());
+        position.setWrapText(true);
     }
 
     public void simulateRace(ActionEvent event) throws IOException{
