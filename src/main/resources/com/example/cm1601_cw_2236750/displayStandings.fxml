@@ -15,7 +15,7 @@
          </font>
       </Label>
       <TextArea fx:id="position" editable="false" layoutX="83.0" layoutY="98.0" prefHeight="227.0" prefWidth="418.0" style="-fx-background-color: red;" />
-      <Button layoutX="208.0" layoutY="341.0" mnemonicParsing="false" onAction="#disPos" prefHeight="30.0" prefWidth="154.0" style="-fx-background-color: red;" styleClass="functions" stylesheets="@Style.css" text="Display Standings" />
+      <Button fx:id="standingDisplay" layoutX="208.0" layoutY="341.0" mnemonicParsing="false" onAction="#displayPositions" prefHeight="30.0" prefWidth="154.0" style="-fx-background-color: red;" styleClass="functions" stylesheets="@Style.css" text="Display Standings" />
       <Button layoutX="194.0" layoutY="400.0" mnemonicParsing="false" onAction="#mainScene" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #FF5804;" styleClass="functions" stylesheets="@Style.css" text="Back" />
       <Button alignment="CENTER" contentDisplay="CENTER" layoutX="285.0" layoutY="400.0" mnemonicParsing="false" onAction="#closeProgram" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: red;" styleClass="exit" stylesheets="@Style.css" text="Exit" />
    </children>

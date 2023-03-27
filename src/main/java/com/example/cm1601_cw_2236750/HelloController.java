@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URL;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 public class HelloController{
@@ -42,6 +43,10 @@ public class HelloController{
     private TextField driverToDelete;
     @FXML
     private TextArea position;
+    @FXML
+    private Button standingDisplay;
+    @FXML
+    private Label racesPrompt;
 
 
     private Stage stage;
@@ -605,11 +610,12 @@ public class HelloController{
         stage.setScene(scene);
         stage.show();
     }
-    public void disPos(){
+    public void displayPositions(){
         position.appendText("Driver | Age | Team Name | Car Type | Current Points | Position\n");
         DriverTableDisplay table = new DriverTableDisplay("Racing.txt");
         position.appendText(table.driverSort());
         position.setWrapText(true);
+        standingDisplay.setDisable(true);
     }
 
     public void simulateRace(ActionEvent event) throws IOException{
@@ -618,6 +624,14 @@ public class HelloController{
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+    public void simulateRaces(){
+        racesPrompt.setText("             Races were Simulated!");
+        for (int numRaces = 0; numRaces < 3; numRaces++){
+            Races simulateRaces = new Races();
+            simulateRaces.simulateRace();
+        }
+
     }
 
     public void racesSummary(ActionEvent event) throws IOException{
