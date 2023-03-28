@@ -22,4 +22,18 @@ public class CreateFile {
         }
 
     }
+    public void saveToFile(){
+        try {
+            BufferedReader readFile = new BufferedReader(new FileReader("Racing.txt"));
+            BufferedWriter writerFile = new BufferedWriter(new FileWriter(fileName));
+            String line;
+            while((line = readFile.readLine()) != null) {
+                writerFile.write(line+"\n");
+            }
+            readFile.close();
+            writerFile.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

@@ -47,6 +47,10 @@ public class HelloController{
     private Button standingDisplay;
     @FXML
     private Label racesPrompt;
+    @FXML
+    private TextField userFileName;
+    @FXML
+    private Label promptSTF;
 
 
     private Stage stage;
@@ -648,6 +652,29 @@ public class HelloController{
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+    public void saveFile(){
+        String fileName = "";
+        try{
+            if (userFileName.getText().isEmpty()) {
+                throw new IOException();
+            }
+            fileName = userFileName.getText() + ".txt";
+            System.out.println(fileName);
+        } catch (IOException e){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Error in File name");
+            alert.setContentText("Enter a name!");
+            alert.showAndWait();
+        }
+        if (!userFileName.getText().isEmpty()){
+            promptSTF.setText("Data saved to File!");
+            userFileName.clear();
+            CreateFile saveFile = new CreateFile(fileName,"");
+            saveFile.saveToFile();
+        }
+
     }
 
     public void displayFile(ActionEvent event) throws IOException{

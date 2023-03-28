@@ -41,6 +41,20 @@ public class Driver {
         }
         return found;
     }
+    public void updateFile(){
+        try {
+            BufferedReader readFile = new BufferedReader(new FileReader("TempFile.txt"));
+            BufferedWriter writerFile = new BufferedWriter(new FileWriter("Racing.txt"));
+            String line;
+            while((line = readFile.readLine()) != null) {
+                writerFile.write(line+"\n");
+            }
+            readFile.close();
+            writerFile.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public void updateDriverData(String dataFieldName, String newData, String updateName) {
         if (dataFieldName.equals("driverNameUpdate")){
@@ -62,20 +76,7 @@ public class Driver {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-
-            try {
-                BufferedReader readFile = new BufferedReader(new FileReader("TempFile.txt"));
-                BufferedWriter writerFile = new BufferedWriter(new FileWriter("Racing.txt"));
-                String line;
-                while((line = readFile.readLine()) != null) {
-                    writerFile.write(line+"\n");
-                }
-                readFile.close();
-                writerFile.close();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-
+            updateFile();
         }
         else if (dataFieldName.equals("driverAgeUpdate")){
             try {
@@ -97,20 +98,7 @@ public class Driver {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-
-            try {
-                BufferedReader readFile = new BufferedReader(new FileReader("TempFile.txt"));
-                BufferedWriter writerFile = new BufferedWriter(new FileWriter("Racing.txt"));
-                String line;
-                while((line = readFile.readLine()) != null) {
-                    writerFile.write(line+"\n");
-                }
-                readFile.close();
-                writerFile.close();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-
+            updateFile();
         }
         else if (dataFieldName.equals("driverTeamNameUpdate")) {
             try {
@@ -132,19 +120,7 @@ public class Driver {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-
-            try {
-                BufferedReader readFile = new BufferedReader(new FileReader("TempFile.txt"));
-                BufferedWriter writerFile = new BufferedWriter(new FileWriter("Racing.txt"));
-                String line;
-                while((line = readFile.readLine()) != null) {
-                    writerFile.write(line+"\n");
-                }
-                readFile.close();
-                writerFile.close();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+            updateFile();
         }
 
         else if (dataFieldName.equals("driverCarTypeUpdate")){
@@ -167,19 +143,7 @@ public class Driver {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-
-            try {
-                BufferedReader readFile = new BufferedReader(new FileReader("TempFile.txt"));
-                BufferedWriter writerFile = new BufferedWriter(new FileWriter("Racing.txt"));
-                String line;
-                while((line = readFile.readLine()) != null) {
-                    writerFile.write(line+"\n");
-                }
-                readFile.close();
-                writerFile.close();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+            updateFile();
         }
         else if (dataFieldName.equals("driverCurrentPointsUpdate")){
             try {
@@ -201,19 +165,7 @@ public class Driver {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-
-            try {
-                BufferedReader readFile = new BufferedReader(new FileReader("TempFile.txt"));
-                BufferedWriter writerFile = new BufferedWriter(new FileWriter("Racing.txt"));
-                String line;
-                while((line = readFile.readLine()) != null) {
-                    writerFile.write(line+"\n");
-                }
-                readFile.close();
-                writerFile.close();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+            updateFile();
         }
     }
 
@@ -235,18 +187,6 @@ public class Driver {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-        try {
-            BufferedReader readFile = new BufferedReader(new FileReader("TempFile.txt"));
-            BufferedWriter writerFile = new BufferedWriter(new FileWriter("Racing.txt"));
-            String line;
-            while((line = readFile.readLine()) != null) {
-                writerFile.write(line+"\n");
-            }
-            readFile.close();
-            writerFile.close();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        updateFile();
     }
 }
