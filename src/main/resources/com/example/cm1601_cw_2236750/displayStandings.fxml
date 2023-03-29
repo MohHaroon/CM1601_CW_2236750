@@ -14,9 +14,10 @@
             <Font name="Bank Gothic Light BT" size="35.0" />
          </font>
       </Label>
-      <TextArea fx:id="position" editable="false" layoutX="83.0" layoutY="98.0" prefHeight="227.0" prefWidth="418.0" style="-fx-background-color: red;" />
-      <Button fx:id="standingDisplay" layoutX="208.0" layoutY="341.0" mnemonicParsing="false" onAction="#displayPositions" prefHeight="30.0" prefWidth="154.0" style="-fx-background-color: red;" styleClass="functions" stylesheets="@Style.css" text="Display Standings" />
-      <Button layoutX="194.0" layoutY="400.0" mnemonicParsing="false" onAction="#mainScene" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #FF5804;" styleClass="functions" stylesheets="@Style.css" text="Back" />
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="285.0" layoutY="400.0" mnemonicParsing="false" onAction="#closeProgram" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: red;" styleClass="exit" stylesheets="@Style.css" text="Exit" />
+      <Button fx:id="standingDisplay" layoutX="236.0" layoutY="341.0" mnemonicParsing="false" onAction="#displayPositions" prefHeight="30.0" prefWidth="154.0" style="-fx-background-color: red;" styleClass="functions" stylesheets="@Style.css" text="Display Standings" />
+      <Button layoutX="222.0" layoutY="398.0" mnemonicParsing="false" onAction="#mainScene" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #FF5804;" styleClass="functions" stylesheets="@Style.css" text="Back" />
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="313.0" layoutY="398.0" mnemonicParsing="false" onAction="#closeProgram" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: red;" styleClass="exit" stylesheets="@Style.css" text="Exit" />
+      <AnchorPane layoutX="67.0" layoutY="86.0" prefHeight="247.0" prefWidth="492.0" style="-fx-background-color: black; -fx-border-color: blue;" />
+      <TextArea fx:id="position" editable="false" layoutX="103.0" layoutY="118.0" prefHeight="198.0" prefWidth="426.0" style="-fx-background-color: red;" />
    </children>
 </AnchorPane>

@@ -1,0 +1,60 @@
+Date              Location
+2023-10-11        Riga
+Driver Name     Current Points        Position
+fsfdd               298                  1
+harow               280                  2
+ewfwe               231                  3
+gssv                292                  4
+wefw                245                  5
+bnmh                234                  6
+
+Date              Location
+2023-09-20        Montalegre
+Driver Name     Current Points        Position
+gssv                302                  1
+bnmh                241                  2
+ewfwe               236                  3
+harow               280                  4
+wefw                245                  5
+fsfdd               298                  6
+
+Date              Location
+2023-09-15        Montalegre
+Driver Name     Current Points        Position
+gssv                312                  1
+fsfdd               305                  2
+ewfwe               241                  3
+wefw                245                  4
+harow               280                  5
+bnmh                241                  6
+
+Date              Location
+2023-06-04        Holjes
+Driver Name     Current Points        Position
+wefw                255                  1
+gssv                319                  2
+fsfdd               310                  3
+ewfwe               241                  4
+harow               280                  5
+bnmh                241                  6
+
+Date              Location
+2023-01-09        Nyirad
+Driver Name     Current Points        Position
+fsfdd               320                  1
+harow               287                  2
+ewfwe               246                  3
+bnmh                241                  4
+gssv                319                  5
+wefw                255                  6
+
+Date              Location
+2023-06-19        Montalegre
+Driver Name     Current Points        Position
+gssv                329                  1
+ewfwe               253                  2
+wefw                260                  3
+fsfdd               320                  4
+harow               287                  5
+bnmh                241                  6
+

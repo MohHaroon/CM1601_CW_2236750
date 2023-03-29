@@ -2,9 +2,9 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="496.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cm1601_cw_2236750.HelloController">
    <children>
@@ -23,6 +23,8 @@
             <Button alignment="CENTER" contentDisplay="CENTER" layoutX="291.0" layoutY="30.0" mnemonicParsing="false" onAction="#closeProgram" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: red;" styleClass="exit" stylesheets="@Style.css" text="Exit" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="9.0" layoutY="93.0" prefHeight="290.0" prefWidth="582.0" style="-fx-background-color: black; -fx-border-color: blue;" />
+      <AnchorPane layoutX="9.0" layoutY="93.0" prefHeight="257.0" prefWidth="582.0" style="-fx-background-color: black; -fx-border-color: blue;" />
+      <TextArea fx:id="racesSummary" editable="false" layoutX="93.0" layoutY="108.0" prefHeight="227.0" prefWidth="418.0" style="-fx-background-color: red;" />
+      <Button fx:id="racesDisplay" layoutX="223.0" layoutY="360.0" mnemonicParsing="false" onAction="#displayRacesSummary" prefHeight="30.0" prefWidth="154.0" style="-fx-background-color: red;" styleClass="functions" stylesheets="@Style.css" text="Display Standings" />
    </children>
 </AnchorPane>

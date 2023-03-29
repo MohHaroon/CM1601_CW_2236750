@@ -13,11 +13,11 @@ public class DriverTableDisplay {
     }
 
     public String driverSort(){
-        String ndn = "";
+        String driverData = "";
         List<Integer> orderedPoints = new ArrayList<Integer>();
         List<String> orderedPointsDriver = new ArrayList<String>();
         try {
-            BufferedReader readFile = new BufferedReader(new FileReader("Racing.txt"));
+            BufferedReader readFile = new BufferedReader(new FileReader(fileName));
             String line;
 
             while((line = readFile.readLine()) != null) {
@@ -30,9 +30,8 @@ public class DriverTableDisplay {
             }
             sortPoints(orderedPoints,orderedPointsDriver);
             readFile.close();
-            int standing = 0;
             for (int x =0;x < orderedPoints.size(); x++){
-                BufferedReader readFileFind = new BufferedReader(new FileReader("Racing.txt"));
+                BufferedReader readFileFind = new BufferedReader(new FileReader(fileName));
                 String lineNum;
                 while((lineNum = readFileFind.readLine()) != null) {
                     String name = lineNum.substring(0,20);
@@ -43,9 +42,8 @@ public class DriverTableDisplay {
                     int currentPoint = orderedPoints.get(x);
                     String currentDriver = orderedPointsDriver.get(x);
                     if ((String.valueOf(currentPoint)).equals(currentPoints.trim()) && (currentDriver.equals(name))){
-                        standing++;
-                        ndn = ndn + "\n" + name.trim() + " | " + age.trim() + " | " + teamName.trim() + " | "
-                                + carType.trim() + " | " + currentPoints.trim() + " | " + standing +"\n";
+                        driverData = driverData + "\n" + name.trim() + " | " + age.trim() + " | " + teamName.trim()
+                                + " | " + carType.trim() + " | " + currentPoints.trim() + "\n";
                     }
                 }
             }
@@ -53,7 +51,7 @@ public class DriverTableDisplay {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        return ndn;
+        return driverData;
     }
 
     public void sortPoints(List <Integer> orderedPoints, List <String> orderedPointsDriver){

@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URL;
@@ -51,6 +52,18 @@ public class HelloController{
     private TextField userFileName;
     @FXML
     private Label promptSTF;
+    @FXML
+    private TextField fileToDisplay;
+    @FXML
+    private TextArea fileData;
+    @FXML
+    private Button fileDisplay;
+    @FXML
+    private TextArea racesSummary;
+    @FXML
+    private Button racesDisplay;
+    @FXML
+    private Button simulateRaces;
 
 
     private Stage stage;
@@ -615,7 +628,7 @@ public class HelloController{
         stage.show();
     }
     public void displayPositions(){
-        position.appendText("Driver | Age | Team Name | Car Type | Current Points | Position\n");
+        position.appendText("Driver | Age | Team Name | Car Type | Current Points\n");
         DriverTableDisplay table = new DriverTableDisplay("Racing.txt");
         position.appendText(table.driverSort());
         position.setWrapText(true);
@@ -635,6 +648,7 @@ public class HelloController{
             Races simulateRaces = new Races();
             simulateRaces.simulateRace();
         }
+        simulateRaces.setDisable(true);
 
     }
 
@@ -644,6 +658,12 @@ public class HelloController{
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+    public void displayRacesSummary(){
+        RacesSummaryDisplay table = new RacesSummaryDisplay("RaceSummary.txt");
+        racesSummary.appendText(table.raceSort());
+        racesSummary.setWrapText(true);
+        racesDisplay.setDisable(true);
     }
 
     public void saveToFile(ActionEvent event) throws IOException{
@@ -677,12 +697,33 @@ public class HelloController{
 
     }
 
-    public void displayFile(ActionEvent event) throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("displayFile.fxml"));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    public void displayFileData(){
+        String fileName = "";
+        try{
+            if (fileToDisplay.getText().isEmpty()) {
+                throw new FileNotFoundException();
+            }
+
+            fileName = fileToDisplay.getText() + ".txt";
+            DriverTableDisplay checkForFile = new DriverTableDisplay(fileName);
+            String checkFile = checkForFile.driverSort();
+//            System.out.println(fileName);
+
+        } catch (Exception e){
+            fileToDisplay.clear();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Error in File name");
+            alert.setContentText("Enter a name; of a file that exists!");
+            alert.showAndWait();
+        }
+        if (!fileToDisplay.getText().isEmpty()) {
+            fileData.appendText("Driver | Age | Team Name | Car Type | Current Points\n");
+            DriverTableDisplay table = new DriverTableDisplay(fileName);
+            fileData.appendText(table.driverSort());
+            fileData.setWrapText(true);
+            fileDisplay.setDisable(true);
+        }
     }
 
     public void displayFileScene(ActionEvent event) throws IOException{

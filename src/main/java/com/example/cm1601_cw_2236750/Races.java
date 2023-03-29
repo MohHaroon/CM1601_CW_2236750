@@ -51,40 +51,42 @@ public class Races {
         int year = raceInfo.nextInt(2023,2024);
         int locationCode = raceInfo.nextInt(0, locations.length);
         LocalDate dateRace = LocalDate.of(year,month,date);
-        System.out.println(dateRace+ "  "+locations[locationCode]+"\n");
+//        System.out.println(dateRace+ "  "+locations[locationCode]+"\n");
         List <String> drivers = getDriver();
-        System.out.println(drivers);
+//        System.out.println(drivers);
         Collections.shuffle(drivers);
-        System.out.println(drivers);
+//        System.out.println(drivers);
         List <String> driverPoints = driverInfoRace(drivers);
-        System.out.println(driverPoints);
+//        System.out.println(driverPoints);
 
         String position1points = driverPoints.get(0);
         String position2points = driverPoints.get(1);
         String position3points = driverPoints.get(2);
+
         int position1 = Integer.parseInt(position1points.trim()) + 10;
         int position2 = Integer.parseInt(position2points.trim()) + 7;
         int position3 = Integer.parseInt(position3points.trim()) + 5;
+
         driverPoints.set(0, String.valueOf(position1));
         driverPoints.set(1, String.valueOf(position2));
         driverPoints.set(2, String.valueOf(position3));
 
-        System.out.println(driverPoints);
+//        System.out.println(driverPoints);
         for (int position = 0; position < 3;position++){
             Driver updateDriverPoints = new Driver("Racing.txt",drivers.get(position));
             updateDriverPoints.updateDriverData("driverCurrentPointsUpdate",driverPoints.get(position),drivers.get(position));
         }
 
         String writeToFile = "Date" + "              " + "Location"+"\n";
-        writeToFile += dateRace + "        " + locations[locationCode]+"\n\n";
-        writeToFile += "Driver Name" + "     " + "Current Points"+ "        " + "Position" + "\n\n";
+        writeToFile += dateRace + "        " + locations[locationCode]+"\n";
+        writeToFile += "Driver Name" + "     " + "Current Points"+ "        " + "Position\n";
         int pos = 1;
         for (int positionCount = 0; positionCount < drivers.size();positionCount++){
             String currentPoints = String.format("%-15s",driverPoints.get(positionCount));
             writeToFile += drivers.get(positionCount) + currentPoints + "      " +pos+"\n";
             pos++;
         }
-        CreateFile racesSummary = new CreateFile("RaceSummary",writeToFile);
+        CreateFile racesSummary = new CreateFile("RaceSummary.txt",writeToFile);
         racesSummary.createAndWrite();
 
     }

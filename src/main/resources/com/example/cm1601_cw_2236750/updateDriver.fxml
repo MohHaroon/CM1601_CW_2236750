@@ -47,6 +47,7 @@
                   <Font name="Bank Gothic Light BT" size="20.0" />
                </font>
             </Label>
+            <Button fx:id="SaveToFile" layoutX="204.0" layoutY="260.0" mnemonicParsing="false" onAction="#saveToFile" prefHeight="30.0" prefWidth="154.0" style="-fx-background-color: red;" styleClass="functions" stylesheets="@Style.css" text="Save To File" />
          </children>
       </AnchorPane>
    </children>
