@@ -1,60 +1,60 @@
 Date              Location
-2023-10-11        Riga
+2023-10-09        Barcelona
 Driver Name     Current Points        Position
-fsfdd               298                  1
-harow               280                  2
-ewfwe               231                  3
-gssv                292                  4
-wefw                245                  5
-bnmh                234                  6
+wefw                339                  1
+fsfdd               398                  2
+ewfwe               320                  3
+harow               352                  4
+gssv                434                  5
+bnmh                331                  6
 
 Date              Location
-2023-09-20        Montalegre
+2023-10-15        Holjes
 Driver Name     Current Points        Position
-gssv                302                  1
-bnmh                241                  2
-ewfwe               236                  3
-harow               280                  4
-wefw                245                  5
-fsfdd               298                  6
+fsfdd               408                  1
+gssv                441                  2
+harow               357                  3
+bnmh                331                  4
+wefw                339                  5
+ewfwe               320                  6
 
 Date              Location
-2023-09-15        Montalegre
+2023-03-15        Barcelona
 Driver Name     Current Points        Position
-gssv                312                  1
-fsfdd               305                  2
-ewfwe               241                  3
-wefw                245                  4
-harow               280                  5
-bnmh                241                  6
+gssv                451                  1
+bnmh                338                  2
+harow               362                  3
+ewfwe               320                  4
+fsfdd               408                  5
+wefw                339                  6
 
 Date              Location
-2023-06-04        Holjes
+2023-08-19        Norway
 Driver Name     Current Points        Position
-wefw                255                  1
-gssv                319                  2
-fsfdd               310                  3
-ewfwe               241                  4
-harow               280                  5
-bnmh                241                  6
+bnmh                348                  1
+gssv                458                  2
+fsfdd               413                  3
+harow               362                  4
+wefw                339                  5
+ewfwe               320                  6
 
 Date              Location
-2023-01-09        Nyirad
+2023-02-21        Holjes
 Driver Name     Current Points        Position
-fsfdd               320                  1
-harow               287                  2
-ewfwe               246                  3
-bnmh                241                  4
-gssv                319                  5
-wefw                255                  6
+bnmh                358                  1
+harow               369                  2
+ewfwe               325                  3
+fsfdd               413                  4
+wefw                339                  5
+gssv                458                  6
 
 Date              Location
-2023-06-19        Montalegre
+2023-10-26        Barcelona
 Driver Name     Current Points        Position
-gssv                329                  1
-ewfwe               253                  2
-wefw                260                  3
-fsfdd               320                  4
-harow               287                  5
-bnmh                241                  6
+gssv                468                  1
+wefw                346                  2
+fsfdd               418                  3
+harow               369                  4
+ewfwe               325                  5
+bnmh                358                  6
 

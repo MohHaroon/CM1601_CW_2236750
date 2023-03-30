@@ -42,8 +42,8 @@ public class DriverTableDisplay {
                     int currentPoint = orderedPoints.get(x);
                     String currentDriver = orderedPointsDriver.get(x);
                     if ((String.valueOf(currentPoint)).equals(currentPoints.trim()) && (currentDriver.equals(name))){
-                        driverData = driverData + "\n" + name.trim() + " | " + age.trim() + " | " + teamName.trim()
-                                + " | " + carType.trim() + " | " + currentPoints.trim() + "\n";
+                        driverData = driverData + "\n" + name.trim() + "  |  " + age.trim() + "  |  " + teamName.trim()
+                                + "  |  " + carType.trim() + "  |  " + currentPoints.trim() + "\n";
                     }
                 }
             }

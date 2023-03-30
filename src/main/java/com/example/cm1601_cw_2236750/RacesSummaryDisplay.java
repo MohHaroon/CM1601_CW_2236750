@@ -55,8 +55,10 @@ public class RacesSummaryDisplay {
                 for(int item = 0; item < raceDetails.size();item++){
 //                    if (String.valueOf(raceDates.get(count)).contains(raceDetails.get(item).substring(26,37))){
                     if (raceDetails.get(item).contains(String.valueOf(raceDates.get(count)))){
-                        System.out.println(raceDetails.get(item) +"\n\n");
-                        displayRaces += raceDetails.get(item) +"\n";
+//                        System.out.println(raceDetails.get(item) +"\n\n");
+                        String raceDetailsU = raceDetails.get(item).replaceAll(" {2,}(?!\\n)", "   |   ") + "\n";
+                        displayRaces += raceDetailsU +"\n";
+//                        displayRaces += raceDetails.get(item) +"\t\n";
 
                     }
                 }
