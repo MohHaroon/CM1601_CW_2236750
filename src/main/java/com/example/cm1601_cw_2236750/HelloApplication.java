@@ -10,6 +10,7 @@ import java.util.Objects;
 
 public class HelloApplication extends Application {
     @Override
+
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("racing.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 620, 500);
@@ -19,8 +20,6 @@ public class HelloApplication extends Application {
         scene.getStylesheets().add(css);
         stage.show();
     }
-
-
 
     public static void main(String[] args) {
         launch();

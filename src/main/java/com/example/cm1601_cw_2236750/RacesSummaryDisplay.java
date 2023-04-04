@@ -1,24 +1,24 @@
 package com.example.cm1601_cw_2236750;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
+// Used to display the races summary
 public class RacesSummaryDisplay {
-    public String fileName;
+    public String fileName; // file name
 
+    // Constructor to initialize the fileName
     RacesSummaryDisplay(String fileName){
         this.fileName = fileName;
     }
 
+    // sorts the races and returns a string to append to the text area
     public String raceSort(){
+
         String displayRaces = "";
         String racesData ="";
         List <String> raceDetails = new ArrayList<String>();
@@ -34,37 +34,31 @@ public class RacesSummaryDisplay {
                     racesData = "";
                 }
             }
-//            System.out.println(raceDetails);
+
             readFile.close();
 
             List <LocalDate> raceDates = new ArrayList<LocalDate>();
             for (String raceDetail : raceDetails) {
-
 
                 String dateString = raceDetail.trim().substring(26, 37);
 
                 LocalDate date = LocalDate.parse(dateString.trim());
                 raceDates.add(date);
             }
-//            System.out.println(raceDates);
-            dateSort(raceDates);
-//            System.out.println(raceDates);
 
+            dateSort(raceDates); // sorts the dates list
 
+            // Data passed to the displayRaces variable in the order of the date
             for (int count = 0; count < raceDetails.size();count++){
                 for(int item = 0; item < raceDetails.size();item++){
-//                    if (String.valueOf(raceDates.get(count)).contains(raceDetails.get(item).substring(26,37))){
                     if (raceDetails.get(item).contains(String.valueOf(raceDates.get(count)))){
-//                        System.out.println(raceDetails.get(item) +"\n\n");
-                        String raceDetailsU = raceDetails.get(item).replaceAll(" {2,}(?!\\n)", "   |   ") + "\n";
+                        String raceDetailsU =
+                                raceDetails.get(item).replaceAll(" {2,}(?!\\n)", "   |   ") + "\n";
                         displayRaces += raceDetailsU +"\n";
-//                        displayRaces += raceDetails.get(item) +"\t\n";
 
                     }
                 }
             }
-
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -72,12 +66,14 @@ public class RacesSummaryDisplay {
         return displayRaces;
     }
 
+    // uses bubble sort to sort the dates
     public void dateSort(List <LocalDate> dateList){
         for (int i =0; i < dateList.size();i++) {
             for (int z = i + 1; z < dateList.size(); z++) {
                 LocalDate tempI = dateList.get(i);
                 LocalDate tempZ = dateList.get(z);
 
+                // if the tempI is before than tempZ, then Z and I is swapped in the list
                 if (tempI.isBefore(tempZ)) {
 
                     LocalDate tmp = dateList.get(i);

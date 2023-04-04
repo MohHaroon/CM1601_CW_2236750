@@ -13,3 +13,33 @@ wsgdfg              23                   9
 gan                 613                  10
 harow               415                  11
 
+Date              Location
+2023-07-27        Riga
+Driver Name     Current Points        Position
+f44454              62                   1
+wsgdfg              30                   2
+fsfdd               494                  3
+Csdojo              69                   4
+hhtht               70                   5
+ewfwe               419                  6
+vsdvs               54                   7
+Haroon pro          415                  8
+bnmh                469                  9
+gan                 613                  10
+wefw                437                  11
+
+Date              Location
+2023-09-19        Holjes
+Driver Name     Current Points        Position
+f44454              72                   1
+Haroon pro          422                  2
+wefw                442                  3
+vsdvs               54                   4
+gan                 613                  5
+hhtht               70                   6
+fsfdd               494                  7
+Csdojo              69                   8
+bnmh                469                  9
+wsgdfg              30                   10
+ewfwe               419                  11
+

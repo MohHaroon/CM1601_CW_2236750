@@ -6,16 +6,23 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+// Usd to sort the drivers according to the points
 public class DriverTableDisplay {
-    public String fileName;
+    public String fileName; // File name
+
+    // Constructor to initialize the fileName
     DriverTableDisplay(String fileName){
         this.fileName = fileName;
     }
 
+    // sorts the drivers and stores in a string variable, to be returned
     public String driverSort(){
+
+        // used to store driver data in an order
         String driverData = "";
-        List<Integer> orderedPoints = new ArrayList<Integer>();
-        List<String> orderedPointsDriver = new ArrayList<String>();
+
+        List<Integer> orderedPoints = new ArrayList<>(); // Used to store driver points
+        List<String> orderedPointsDriver = new ArrayList<>(); // Used to store the driver name
         try {
             BufferedReader readFile = new BufferedReader(new FileReader(fileName));
             String line;
@@ -28,7 +35,7 @@ public class DriverTableDisplay {
                 orderedPointsDriver.add(driverName);
 
             }
-            sortPoints(orderedPoints,orderedPointsDriver);
+            sortPoints(orderedPoints,orderedPointsDriver); // using sortPoints to order the data in both the lists
             readFile.close();
             for (int x =0;x < orderedPoints.size(); x++){
                 BufferedReader readFileFind = new BufferedReader(new FileReader(fileName));
@@ -41,6 +48,8 @@ public class DriverTableDisplay {
                     String currentPoints = lineNum.substring(64,79);
                     int currentPoint = orderedPoints.get(x);
                     String currentDriver = orderedPointsDriver.get(x);
+
+                    // Driver details if found, is passed to the variable
                     if ((String.valueOf(currentPoint)).equals(currentPoints.trim()) && (currentDriver.equals(name))){
                         driverData = driverData + "\n" + name.trim() + "  |  " + age.trim() + "  |  " + teamName.trim()
                                 + "  |  " + carType.trim() + "  |  " + currentPoints.trim() + "\n";
@@ -54,12 +63,14 @@ public class DriverTableDisplay {
         return driverData;
     }
 
+    //sorting the points using bubble-sort
     public void sortPoints(List <Integer> orderedPoints, List <String> orderedPointsDriver){
             for (int i =0; i < orderedPoints.size();i++){
                 for (int z = i +1; z < orderedPoints.size();z++){
                     int tempI = orderedPoints.get(i);
                     int tempZ = orderedPoints.get(z);
 
+                    // if the tempI is smaller than tempZ, then Z and I is swapped in both the lists.
                     if (tempI  < tempZ){
 
                         int tmp = orderedPoints.get(i);
