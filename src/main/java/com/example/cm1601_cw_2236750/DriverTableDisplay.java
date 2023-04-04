@@ -8,7 +8,7 @@ import java.util.List;
 
 // Usd to sort the drivers according to the points
 public class DriverTableDisplay {
-    public String fileName; // File name
+    private final String fileName; // File name
 
     // Constructor to initialize the fileName
     DriverTableDisplay(String fileName){

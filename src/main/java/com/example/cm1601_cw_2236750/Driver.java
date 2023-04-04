@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 // Used to update, delete a driver and check whether a driver already exists
 public class Driver {
-    public String fileName; // Name of the file
-    public String driverNameFind; // Name of the driver
+    private final String fileName; // Name of the file
+    private final String driverNameFind; // Name of the driver
 
     // Constructor to initialize the fileName and driverName
     Driver(String fileName, String driverName){

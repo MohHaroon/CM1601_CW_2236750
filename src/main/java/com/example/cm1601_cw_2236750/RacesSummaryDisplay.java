@@ -9,7 +9,7 @@ import java.util.List;
 
 // Used to display the races summary
 public class RacesSummaryDisplay {
-    public String fileName; // file name
+    private final String fileName; // file name
 
     // Constructor to initialize the fileName
     RacesSummaryDisplay(String fileName){

@@ -4,8 +4,8 @@ import java.io.*;
 // used to create,add data to a file, and save data to a file
 public class CreateFile {
 
-    public String fileName; // Name of the file
-    public String driverData; // Data to be written
+    private final String fileName; // Name of the file
+    private final String driverData; // Data to be written
 
     // Constructor to initialize the fileName and driverData
     CreateFile(String fileName,String driverData){

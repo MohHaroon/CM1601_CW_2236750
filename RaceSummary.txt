@@ -43,3 +43,33 @@ bnmh                469                  9
 wsgdfg              30                   10
 ewfwe               419                  11
 
+Date              Location
+2023-06-18        Barcelona
+Driver Name     Current Points        Position
+kan                 623                  1
+wefw                449                  2
+wsgdfg              35                   3
+ewfwe               419                  4
+fsfdd               494                  5
+Haroon pro          422                  6
+greeg               23                   7
+f44454              72                   8
+hhtht               70                   9
+vsdvs               54                   10
+Csdojo              69                   11
+
+Date              Location
+2023-05-05        Barcelona
+Driver Name     Current Points        Position
+wefw                459                  1
+fsfdd               501                  2
+ewfwe               424                  3
+greeg               23                   4
+hhtht               70                   5
+vsdvs               54                   6
+f44454              72                   7
+Csdojo              69                   8
+kan                 623                  9
+wsgdfg              35                   10
+Haroon pro          422                  11
+
