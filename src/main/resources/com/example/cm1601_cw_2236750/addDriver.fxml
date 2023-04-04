@@ -19,9 +19,18 @@
       </AnchorPane>
       <AnchorPane layoutX="-2.0" layoutY="490.0" prefHeight="110.0" prefWidth="600.0">
          <children>
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="55.0" mnemonicParsing="false" onAction="#addDriverData" prefHeight="34.0" prefWidth="142.0" style="-fx-background-color: red;" styleClass="functions" stylesheets="@Style.css" text="Add Driver" />
-            <Button layoutX="59.0" layoutY="12.0" mnemonicParsing="false" onAction="#mainScene" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #FF5804;" styleClass="functions" stylesheets="@Style.css" text="Back" />
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="434.0" layoutY="10.0" mnemonicParsing="false" onAction="#closeProgram" prefHeight="30.0" prefWidth="104.0" style="-fx-background-color: red;" styleClass="exit" stylesheets="@Style.css" text="Exit" />
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="55.0" mnemonicParsing="false" onAction="#addDriverData" prefHeight="34.0" prefWidth="142.0" style="-fx-background-color: red;" styleClass="functions" stylesheets="@Style.css" text="Add Driver">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button layoutX="59.0" layoutY="12.0" mnemonicParsing="false" onAction="#mainScene" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #FF5804;" styleClass="functions" stylesheets="@Style.css" text="Back">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="434.0" layoutY="10.0" mnemonicParsing="false" onAction="#closeProgram" prefHeight="30.0" prefWidth="104.0" style="-fx-background-color: red;" styleClass="exit" stylesheets="@Style.css" text="Exit">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
          </children>
       </AnchorPane>
       <AnchorPane layoutY="118.0" prefHeight="370.0" prefWidth="600.0">

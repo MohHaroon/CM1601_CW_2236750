@@ -34,7 +34,7 @@ public class RacesSummaryDisplay {
                     racesData = "";
                 }
             }
-            System.out.println(raceDetails);
+//            System.out.println(raceDetails);
             readFile.close();
 
             List <LocalDate> raceDates = new ArrayList<LocalDate>();
@@ -46,9 +46,9 @@ public class RacesSummaryDisplay {
                 LocalDate date = LocalDate.parse(dateString.trim());
                 raceDates.add(date);
             }
-            System.out.println(raceDates);
+//            System.out.println(raceDates);
             dateSort(raceDates);
-            System.out.println(raceDates);
+//            System.out.println(raceDates);
 
 
             for (int count = 0; count < raceDetails.size();count++){

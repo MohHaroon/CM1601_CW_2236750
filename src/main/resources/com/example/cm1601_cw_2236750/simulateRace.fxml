@@ -9,16 +9,22 @@
    <children>
       <AnchorPane layoutX="64.0" layoutY="73.0" prefHeight="182.0" prefWidth="479.0">
          <children>
-            <Label fx:id="racesPrompt" layoutX="14.0" layoutY="21.0" prefHeight="134.0" prefWidth="459.0" style="-fx-background-color: black;" text="Click button On top to simulate races..." textFill="#ef2323">
+            <Label fx:id="racesPrompt" layoutX="14.0" layoutY="21.0" prefHeight="134.0" prefWidth="459.0" style="-fx-background-color: black;" text="Click button On top to simulate a race..." textFill="#ef2323">
                <font>
                   <Font name="Bank Gothic Light BT" size="20.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <Button layoutX="209.0" layoutY="268.0" mnemonicParsing="false" onAction="#mainScene" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #FF5804;" styleClass="functions" stylesheets="@Style.css" text="Back" />
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="268.0" mnemonicParsing="false" onAction="#closeProgram" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: red;" styleClass="exit" stylesheets="@Style.css" text="Exit" />
-      <Button fx:id="simulateRaces" alignment="CENTER" contentDisplay="CENTER" layoutX="223.0" layoutY="31.0" mnemonicParsing="false" onAction="#simulateRaces" prefHeight="34.0" prefWidth="151.0" style="-fx-background-color: red;" styleClass="functions" stylesheets="@Style.css" text="Simulate Races">
+      <Button layoutX="209.0" layoutY="268.0" mnemonicParsing="false" onAction="#mainScene" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #FF5804;" styleClass="functions" stylesheets="@Style.css" text="Back">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="268.0" mnemonicParsing="false" onAction="#closeProgram" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: red;" styleClass="exit" stylesheets="@Style.css" text="Exit">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="simulateRaces" alignment="CENTER" contentDisplay="CENTER" layoutX="223.0" layoutY="31.0" mnemonicParsing="false" onAction="#simulateRaces" prefHeight="34.0" prefWidth="151.0" style="-fx-background-color: red;" styleClass="functions" stylesheets="@Style.css" text="Simulate Race">
          <font>
             <Font name="Javanese Text" size="12.0" />
          </font>

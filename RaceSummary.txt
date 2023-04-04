@@ -1,60 +1,15 @@
 Date              Location
-2023-10-09        Barcelona
+2023-11-26        Nyirad
 Driver Name     Current Points        Position
-wefw                339                  1
-fsfdd               398                  2
-ewfwe               320                  3
-harow               352                  4
-gssv                434                  5
-bnmh                331                  6
-
-Date              Location
-2023-10-15        Holjes
-Driver Name     Current Points        Position
-fsfdd               408                  1
-gssv                441                  2
-harow               357                  3
-bnmh                331                  4
-wefw                339                  5
-ewfwe               320                  6
-
-Date              Location
-2023-03-15        Barcelona
-Driver Name     Current Points        Position
-gssv                451                  1
-bnmh                338                  2
-harow               362                  3
-ewfwe               320                  4
-fsfdd               408                  5
-wefw                339                  6
-
-Date              Location
-2023-08-19        Norway
-Driver Name     Current Points        Position
-bnmh                348                  1
-gssv                458                  2
-fsfdd               413                  3
-harow               362                  4
-wefw                339                  5
-ewfwe               320                  6
-
-Date              Location
-2023-02-21        Holjes
-Driver Name     Current Points        Position
-bnmh                358                  1
-harow               369                  2
-ewfwe               325                  3
-fsfdd               413                  4
-wefw                339                  5
-gssv                458                  6
-
-Date              Location
-2023-10-26        Barcelona
-Driver Name     Current Points        Position
-gssv                468                  1
-wefw                346                  2
-fsfdd               418                  3
-harow               369                  4
-ewfwe               325                  5
-bnmh                358                  6
+hhtht               70                   1
+vsdvs               54                   2
+bababa              39                   3
+fsfdd               489                  4
+ewfwe               419                  5
+f44454              52                   6
+bnmh                469                  7
+wefw                437                  8
+wsgdfg              23                   9
+gan                 613                  10
+harow               415                  11
 

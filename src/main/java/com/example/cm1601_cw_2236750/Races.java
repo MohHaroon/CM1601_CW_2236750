@@ -1,7 +1,6 @@
 package com.example.cm1601_cw_2236750;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalDate;

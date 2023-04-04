@@ -1,10 +1,6 @@
 package com.example.cm1601_cw_2236750;
 
-import javafx.fxml.FXML;
-import javafx.scene.control.TextArea;
-
 import java.io.*;
-import java.time.format.TextStyle;
 import java.util.Scanner;
 
 

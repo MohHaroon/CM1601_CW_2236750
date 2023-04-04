@@ -19,15 +19,42 @@
                   <Font size="25.0" />
                </font>
             </Text>
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="90.0" mnemonicParsing="false" onAction="#addDriver" prefHeight="30.0" prefWidth="370.0" style="-fx-background-color: #3498DB;" styleClass="functions" stylesheets="@Style.css" text="Add a Driver" textAlignment="CENTER" translateX="-35.0" />
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="127.0" mnemonicParsing="false" onAction="#updateDriver" prefHeight="30.0" prefWidth="370.0" style="-fx-background-color: #3498DB;" styleClass="functions" stylesheets="@Style.css" text="Update Driver details" textAlignment="CENTER" translateX="-35.0" />
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="165.0" mnemonicParsing="false" onAction="#deleteDriver" prefHeight="30.0" prefWidth="370.0" style="-fx-background-color: #3498DB;" styleClass="functions" stylesheets="@Style.css" text="Delete Driver details" textAlignment="CENTER" translateX="-35.0" />
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="202.0" mnemonicParsing="false" onAction="#displayStandings" prefHeight="30.0" prefWidth="370.0" style="-fx-background-color: #3498DB;" styleClass="functions" stylesheets="@Style.css" text="Display rally cross standing table" textAlignment="CENTER" translateX="-35.0" />
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="240.0" mnemonicParsing="false" onAction="#simulateRace" prefHeight="30.0" prefWidth="370.0" style="-fx-background-color: #3498DB;" styleClass="functions" stylesheets="@Style.css" text="Simulate a race" textAlignment="CENTER" translateX="-35.0" />
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="277.0" mnemonicParsing="false" onAction="#racesSummary" prefHeight="30.0" prefWidth="370.0" style="-fx-background-color: #3498DB;" styleClass="functions" stylesheets="@Style.css" text="View races summary" textAlignment="CENTER" translateX="-35.0" />
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="315.0" mnemonicParsing="false" onAction="#saveToFile" prefHeight="30.0" prefWidth="370.0" style="-fx-background-color: #3498DB;" styleClass="functions" stylesheets="@Style.css" text="Save current data to a text file" textAlignment="CENTER" translateX="-35.0" />
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="352.0" mnemonicParsing="false" onAction="#displayFileScene" prefHeight="30.0" prefWidth="370.0" style="-fx-background-color: #3498DB;" styleClass="functions" stylesheets="@Style.css" text="Display data in the text file" textAlignment="CENTER" translateX="-35.0" />
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="395.0" layoutY="421.0" mnemonicParsing="false" onAction="#closeProgram" prefHeight="30.0" prefWidth="159.0" style="-fx-background-color: red;" styleClass="exit" stylesheets="@Style.css" text="Exit" />
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="90.0" mnemonicParsing="false" onAction="#addDriver" prefHeight="30.0" prefWidth="370.0" style="-fx-background-color: #3498DB;" styleClass="functions" stylesheets="@Style.css" text="Add a Driver" textAlignment="CENTER" translateX="-35.0">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="127.0" mnemonicParsing="false" onAction="#updateDriver" prefHeight="30.0" prefWidth="370.0" style="-fx-background-color: #3498DB;" styleClass="functions" stylesheets="@Style.css" text="Update Driver details" textAlignment="CENTER" translateX="-35.0">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="165.0" mnemonicParsing="false" onAction="#deleteDriver" prefHeight="30.0" prefWidth="370.0" style="-fx-background-color: #3498DB;" styleClass="functions" stylesheets="@Style.css" text="Delete Driver details" textAlignment="CENTER" translateX="-35.0">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="202.0" mnemonicParsing="false" onAction="#displayStandings" prefHeight="30.0" prefWidth="370.0" style="-fx-background-color: #3498DB;" styleClass="functions" stylesheets="@Style.css" text="Display rally cross standing table" textAlignment="CENTER" translateX="-35.0">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="240.0" mnemonicParsing="false" onAction="#simulateRace" prefHeight="30.0" prefWidth="370.0" style="-fx-background-color: #3498DB;" styleClass="functions" stylesheets="@Style.css" text="Simulate a race" textAlignment="CENTER" translateX="-35.0">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="277.0" mnemonicParsing="false" onAction="#racesSummary" prefHeight="30.0" prefWidth="370.0" style="-fx-background-color: #3498DB;" styleClass="functions" stylesheets="@Style.css" text="View races summary" textAlignment="CENTER" translateX="-35.0">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="315.0" mnemonicParsing="false" onAction="#saveToFile" prefHeight="30.0" prefWidth="370.0" style="-fx-background-color: #3498DB;" styleClass="functions" stylesheets="@Style.css" text="Save current data to a text file" textAlignment="CENTER" translateX="-35.0">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="352.0" mnemonicParsing="false" onAction="#displayFileScene" prefHeight="30.0" prefWidth="370.0" style="-fx-background-color: #3498DB;" styleClass="functions" stylesheets="@Style.css" text="Display data in the text file" textAlignment="CENTER" translateX="-35.0">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="395.0" layoutY="421.0" mnemonicParsing="false" onAction="#closeProgram" prefHeight="30.0" prefWidth="159.0" style="-fx-background-color: red;" styleClass="exit" stylesheets="@Style.css" text="Exit">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
          </children>
       </AnchorPane>
    </children>

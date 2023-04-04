@@ -25,9 +25,18 @@
                   <Font name="Bank Gothic Light BT" size="20.0" />
                </font>
             </Label>
-            <Button layoutX="31.0" layoutY="170.0" mnemonicParsing="false" onAction="#mainScene" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: #FF5804;" styleClass="functions" stylesheets="@Style.css" text="Back" />
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="450.0" layoutY="170.0" mnemonicParsing="false" onAction="#closeProgram" prefHeight="26.0" prefWidth="92.0" style="-fx-background-color: red;" styleClass="exit" stylesheets="@Style.css" text="Exit" />
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="203.0" layoutY="227.0" mnemonicParsing="false" onAction="#saveFile" prefHeight="34.0" prefWidth="151.0" style="-fx-background-color: red;" styleClass="functions" stylesheets="@Style.css" text="Save File" />
+            <Button layoutX="31.0" layoutY="170.0" mnemonicParsing="false" onAction="#mainScene" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: #FF5804;" styleClass="functions" stylesheets="@Style.css" text="Back">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="450.0" layoutY="170.0" mnemonicParsing="false" onAction="#closeProgram" prefHeight="26.0" prefWidth="92.0" style="-fx-background-color: red;" styleClass="exit" stylesheets="@Style.css" text="Exit">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="203.0" layoutY="227.0" mnemonicParsing="false" onAction="#saveFile" prefHeight="34.0" prefWidth="151.0" style="-fx-background-color: red;" styleClass="functions" stylesheets="@Style.css" text="Save File">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
             <Label fx:id="promptSTF" layoutX="213.0" layoutY="133.0" prefHeight="18.0" prefWidth="139.0" textFill="#089618" />
          </children>
       </AnchorPane>

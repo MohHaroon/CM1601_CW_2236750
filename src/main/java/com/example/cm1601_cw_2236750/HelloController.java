@@ -1,8 +1,6 @@
 package com.example.cm1601_cw_2236750;
 
-import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -13,10 +11,6 @@ import javafx.stage.Stage;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.URI;
-import java.net.URL;
-import java.util.Random;
-import java.util.ResourceBundle;
 
 public class HelloController{
 
@@ -643,12 +637,13 @@ public class HelloController{
         stage.show();
     }
     public void simulateRaces(){
-        racesPrompt.setText("             Races were Simulated!");
-        for (int numRaces = 0; numRaces < 3; numRaces++){
-            Races simulateRaces = new Races();
-            simulateRaces.simulateRace();
-        }
-        simulateRaces.setDisable(true);
+        racesPrompt.setText("             Race was Simulated!");
+        Races simulateRaces = new Races();
+        simulateRaces.simulateRace();
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
+        alert.setContentText("A Race was Simulated!");
+        alert.showAndWait();
 
     }
 
