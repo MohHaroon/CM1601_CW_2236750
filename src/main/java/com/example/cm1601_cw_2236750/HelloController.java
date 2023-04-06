@@ -1,5 +1,7 @@
 package com.example.cm1601_cw_2236750;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,58 +9,18 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.Objects;
 
 public class HelloController{
 
-    // Initialising elements from the GUI
-    @FXML
-    private TextField addDriverName;
-    @FXML
-    private TextField addDriverAge;
-    @FXML
-    private TextField addDriverCarType;
-    @FXML
-    private TextField addDriverTeamName;
-    @FXML
-    private TextField addDriverCurrentPoints;
-    @FXML
-    private Label prompt;
-    @FXML
-    private TextField newData;
-    @FXML
-    private TextField driverToUpdate;
-    @FXML
-    private Label promptUpdate;
-    @FXML
-    private Label promptDelete;
-    @FXML
-    private TextField driverToDelete;
-    @FXML
-    private TextArea position;
-    @FXML
-    private Button standingDisplay;
-    @FXML
-    private Label racesPrompt;
-    @FXML
-    private TextField userFileName;
-    @FXML
-    private Label promptSTF;
-    @FXML
-    private TextField fileToDisplay;
-    @FXML
-    private TextArea fileData;
-    @FXML
-    private Button fileDisplay;
-    @FXML
-    private TextArea racesSummary;
-    @FXML
-    private Button racesDisplay;
-
+    // Initialising elements of the GUI to private
     private Stage stage;
     private Scene scene;
 
@@ -71,6 +33,19 @@ public class HelloController{
         stage.setScene(scene);
         stage.show();
     }
+
+    @FXML
+    private TextField addDriverName;
+    @FXML
+    private TextField addDriverAge;
+    @FXML
+    private TextField addDriverCarType;
+    @FXML
+    private TextField addDriverTeamName;
+    @FXML
+    private TextField addDriverCurrentPoints;
+    @FXML
+    private Label prompt;
 
     // loading addDriver scene
     public void addDriver(ActionEvent event) throws IOException{
@@ -230,6 +205,12 @@ public class HelloController{
 
         }}
 
+    @FXML
+    private TextField newData;
+    @FXML
+    private TextField driverToUpdate;
+    @FXML
+    private Label promptUpdate;
 
     // Loading updateDriver scene
     public void updateDriver(ActionEvent event) throws IOException{
@@ -634,6 +615,11 @@ public class HelloController{
         }
     }
 
+    @FXML
+    private Label promptDelete;
+    @FXML
+    private TextField driverToDelete;
+
     // Loading deleteDriver scene
     public void deleteDriver(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("deleteDriver.fxml")));
@@ -712,6 +698,13 @@ public class HelloController{
         stage.show();
     }
 
+    @FXML
+    private TextArea position;
+    @FXML
+    private Button standingDisplay;
+    @FXML
+    private Label racesPrompt;
+
     // Called when displayPositions button is clicked
     public void displayPositions(){
 
@@ -760,6 +753,11 @@ public class HelloController{
         stage.show();
     }
 
+    @FXML
+    private TextArea racesSummary;
+    @FXML
+    private Button racesDisplay;
+
     // called when display races button is pressed
     public void displayRacesSummary(){
         RacesSummaryDisplay table = new RacesSummaryDisplay("RaceSummary.txt");
@@ -778,6 +776,13 @@ public class HelloController{
         stage.setScene(scene);
         stage.show();
     }
+
+    @FXML
+    private TextField userFileName;
+    @FXML
+    private Label promptSTF;
+    @FXML
+    private TextField fileToDisplay;
 
     // Called when save file button is clicked
     public void saveFile(){
@@ -813,8 +818,31 @@ public class HelloController{
 
     }
 
+
+    @FXML
+    private TableColumn<driverTable, String> dAge;
+
+    @FXML
+    private TableColumn<driverTable, String> dCar;
+
+    @FXML
+    private TableColumn<driverTable, String> dName;
+
+    @FXML
+    private TableColumn<driverTable, String> dPoints;
+
+    @FXML
+    private TableColumn<driverTable, String> dTeam;
+
+    @FXML
+    private Button fileDisplay;
+
+    @FXML
+    private TableView<driverTable> fileTable;
+
+
     // called when display file button s clicked
-    public void displayFileData(){
+    public void displayFileData() throws IOException {
 
         // variables initialised
         String fileName = "";
@@ -840,12 +868,63 @@ public class HelloController{
 
         // if text field is not empty, data is displayed.
         if (!fileToDisplay.getText().isEmpty()) {
-            fileData.appendText("Driver | Age | Team Name | Car Type | Current Points\n");
-            DriverTableDisplay table = new DriverTableDisplay(fileName);
-            fileData.appendText(table.driverSort());
-            fileData.setWrapText(true);
-            fileDisplay.setDisable(true);
+
+            ObservableList<driverTable> list =FXCollections.observableArrayList();
+
+            BufferedReader userFile = new BufferedReader(new FileReader(fileName));
+            String line = userFile.readLine();
+            while (line != null){
+                String [] driverData = {line.substring(0,20),line.substring(20,24),line.substring(24,44)
+                        ,line.substring(44,64),line.substring(64,79)};
+                list.add(new driverTable(driverData[0],driverData[1],driverData[2],driverData[3],driverData[4]));
+                line = userFile.readLine();
+            }
+            userFile.close();
+
+            dName.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverName"));
+            dAge.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverAge"));
+            dTeam.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverTeam"));
+            dCar.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverCar"));
+            dPoints.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverPoints"));
+
+            fileTable.setItems(list);
         }
+    }
+
+    @FXML
+    private TableColumn<driverTable, String> driverAge;
+    @FXML
+    private TableColumn<driverTable, String> driverCar;
+    @FXML
+    private TableView<driverTable> driverDeleteTable;
+    @FXML
+    private TableColumn<driverTable, String> driverName;
+    @FXML
+    private TableColumn<driverTable, String> driverPoints;
+    @FXML
+    private TableColumn<driverTable, String> driverTeam;
+
+    public void deleteTableDisplay() throws IOException {
+        ObservableList<driverTable> list =FXCollections.observableArrayList();
+
+        BufferedReader userFile = new BufferedReader(new FileReader("Racing.txt"));
+        String line = userFile.readLine();
+        while (line != null){
+            String [] driverData = {line.substring(0,20),line.substring(20,24),line.substring(24,44),
+                    line.substring(44,64),line.substring(64,79)};
+            list.add(new driverTable(driverData[0],driverData[1],driverData[2],driverData[3],driverData[4]));
+            line = userFile.readLine();
+        }
+        userFile.close();
+
+        driverName.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverName"));
+        driverAge.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverAge"));
+        driverTeam.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverTeam"));
+        driverCar.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverCar"));
+        driverPoints.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverPoints"));
+
+        driverDeleteTable.setItems(list);
+
     }
 
     // Loading display file scene

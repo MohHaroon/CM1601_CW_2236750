@@ -2,7 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -46,7 +47,15 @@
       </Label>
       <AnchorPane layoutX="54.0" layoutY="215.0" prefHeight="249.0" prefWidth="500.0" style="-fx-background-color: black; -fx-border-color: blue;">
          <children>
-            <TextArea fx:id="fileData" editable="false" layoutX="41.0" layoutY="31.0" prefHeight="188.0" prefWidth="427.0" style="-fx-background-color: red;" styleClass="text_area" stylesheets="@Style.css" />
+            <TableView fx:id="fileTable" layoutX="13.0" layoutY="11.0" prefHeight="227.0" prefWidth="473.0">
+              <columns>
+                <TableColumn fx:id="dName" prefWidth="137.60003662109375" text="Driver Name" />
+                <TableColumn fx:id="dAge" prefWidth="39.199951171875" text="Age" />
+                  <TableColumn fx:id="dTeam" prefWidth="118.39996337890625" text="Team Name" />
+                  <TableColumn fx:id="dCar" prefWidth="115.20001220703125" text="Car Type" />
+                  <TableColumn fx:id="dPoints" prefWidth="63.20001220703125" text="Points" />
+              </columns>
+            </TableView>
          </children>
       </AnchorPane>
    </children>

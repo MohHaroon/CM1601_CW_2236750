@@ -157,3 +157,15 @@ Mad ridepl          30                   7
 hhtht               82                   8
 wefw                476                  9
 
+Date              Location
+2023-11-14        Riga
+Driver Name     Current Points        Position
+indi thosm          432                  1
+hhtht               89                   2
+greeg               45                   3
+fsfdd               523                  4
+ewfwe               431                  5
+Mad ridepl          30                   6
+wefwe               476                  7
+Csdojo              76                   8
+
