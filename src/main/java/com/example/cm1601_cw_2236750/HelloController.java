@@ -407,8 +407,6 @@ public class HelloController{
             newData.clear();
             driverToUpdate.clear();
         }
-
-
     }
 
     // Called when driver age needs to be updated
