@@ -1,6 +1,6 @@
 package com.example.cm1601_cw_2236750;
 
-public class driverTable {
+public class DriverTable {
     private String driverName;
     private String driverAge;
     private String driverTeam;
@@ -8,7 +8,7 @@ public class driverTable {
     private String driverPoints;
 
 
-    public driverTable(String driverName, String driverAge, String driverTeam, String driverCar, String driverPoints) {
+    public DriverTable(String driverName, String driverAge, String driverTeam, String driverCar, String driverPoints) {
         this.driverName = driverName;
         this.driverAge = driverAge;
         this.driverTeam = driverTeam;

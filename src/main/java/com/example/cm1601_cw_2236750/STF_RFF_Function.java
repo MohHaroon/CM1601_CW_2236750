@@ -62,17 +62,17 @@ public class STF_RFF_Function {
 
     // Defining GUI elements from the java FXMl file
     @FXML
-    private TableColumn<driverTable, String> dAge;
+    private TableColumn<DriverTable, String> dAge;
     @FXML
-    private TableColumn<driverTable, String> dCar;
+    private TableColumn<DriverTable, String> dCar;
     @FXML
-    private TableColumn<driverTable, String> dName;
+    private TableColumn<DriverTable, String> dName;
     @FXML
-    private TableColumn<driverTable, String> dPoints;
+    private TableColumn<DriverTable, String> dPoints;
     @FXML
-    private TableColumn<driverTable, String> dTeam;
+    private TableColumn<DriverTable, String> dTeam;
     @FXML
-    private TableView<driverTable> fileTable;
+    private TableView<DriverTable> fileTable;
 
     // called when display file button s clicked
     public void displayFileData() throws IOException {
@@ -99,23 +99,23 @@ public class STF_RFF_Function {
         // if text field is not empty, data is displayed.
         if (!fileToDisplay.getText().isEmpty()) {
 
-            ObservableList<driverTable> list = FXCollections.observableArrayList();
+            ObservableList<DriverTable> list = FXCollections.observableArrayList();
 
             BufferedReader userFile = new BufferedReader(new FileReader(fileName));
             String line = userFile.readLine();
             while (line != null){
                 String [] driverData = {line.substring(0,20),line.substring(20,24),line.substring(24,44)
                         ,line.substring(44,64),line.substring(64,79)};
-                list.add(new driverTable(driverData[0],driverData[1],driverData[2],driverData[3],driverData[4]));
+                list.add(new DriverTable(driverData[0],driverData[1],driverData[2],driverData[3],driverData[4]));
                 line = userFile.readLine();
             }
             userFile.close();
 
-            dName.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverName"));
-            dAge.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverAge"));
-            dTeam.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverTeam"));
-            dCar.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverCar"));
-            dPoints.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverPoints"));
+            dName.setCellValueFactory(new PropertyValueFactory<DriverTable,String>("driverName"));
+            dAge.setCellValueFactory(new PropertyValueFactory<DriverTable,String>("driverAge"));
+            dTeam.setCellValueFactory(new PropertyValueFactory<DriverTable,String>("driverTeam"));
+            dCar.setCellValueFactory(new PropertyValueFactory<DriverTable,String>("driverCar"));
+            dPoints.setCellValueFactory(new PropertyValueFactory<DriverTable,String>("driverPoints"));
 
             fileTable.setItems(list);
         }
@@ -134,6 +134,19 @@ public class STF_RFF_Function {
         stage.show();
     }
 
+    public void navigateFunctionFileDisplay(ActionEvent actionEvent, String fileFXML) throws IOException {
+        // Identifying and closing the previous stage
+        Stage previousStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+        previousStage.close();
+
+        // Opening a new stage
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fileFXML)));
+        stage.setScene(new Scene(root,620,570));
+        stage.setTitle("World rally cross championship management system");
+        stage.show();
+    }
+
     // Loading updateDriver.fxml file
     @FXML
     protected void updateDriver(ActionEvent actionEvent) throws Exception{
@@ -144,6 +157,12 @@ public class STF_RFF_Function {
     @FXML
     protected void mainScene(ActionEvent actionEvent) throws Exception{
         navigateFunction(actionEvent,"racing.fxml");
+    }
+
+    // Loading displayFileScene.fxml file
+    @FXML
+    protected void displayFile(ActionEvent actionEvent) throws Exception{
+        navigateFunctionFileDisplay(actionEvent,"displayFileScene.fxml");
     }
 
     // Closing Program

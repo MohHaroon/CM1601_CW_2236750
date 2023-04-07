@@ -1,15 +1,19 @@
 package com.example.cm1601_cw_2236750;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.Objects;
 
@@ -26,7 +30,7 @@ public class UDD_Function {
     AlertErrors errorAlert = new AlertErrors();
 
     // Called when the update driver name is clicked
-    public void updateDriverName(){
+    public void updateDriverName() throws IOException {
 
         // prompt is set
         promptUpdate.setText("                        ");
@@ -94,11 +98,12 @@ public class UDD_Function {
             promptUpdate.setText("Driver updated Successfully!");
             newData.clear();
             driverToUpdate.clear();
+            updateDriverTable();
         }
     }
 
     // Called when driver age needs to be updated
-    public void updateDriverAge(){
+    public void updateDriverAge() throws IOException {
 
         // prompt is set
         promptUpdate.setText("                        ");
@@ -162,11 +167,12 @@ public class UDD_Function {
             promptUpdate.setText("Driver updated Successfully!");
             newData.clear();
             driverToUpdate.clear();
+            updateDriverTable();
         }
     }
 
     // Called when driver age needs to be updated
-    public void updateTeamName(){
+    public void updateTeamName() throws IOException {
 
         // prompt is set
         promptUpdate.setText("                        ");
@@ -226,10 +232,11 @@ public class UDD_Function {
             promptUpdate.setText("Driver updated Successfully!");
             newData.clear();
             driverToUpdate.clear();
+            updateDriverTable();
         }
 
     }
-    public void updateCarType(){
+    public void updateCarType() throws IOException {
 
         // prompt is set
         promptUpdate.setText("                        ");
@@ -289,9 +296,10 @@ public class UDD_Function {
             promptUpdate.setText("Driver updated Successfully!");
             newData.clear();
             driverToUpdate.clear();
+            updateDriverTable();
         }
     }
-    public void updateCurrentPoints(){
+    public void updateCurrentPoints() throws IOException {
 
         // prompt is set
         promptUpdate.setText("                        ");
@@ -350,6 +358,7 @@ public class UDD_Function {
             promptUpdate.setText("Driver updated Successfully!");
             newData.clear();
             driverToUpdate.clear();
+            updateDriverTable();
         }
     }
 
@@ -376,6 +385,56 @@ public class UDD_Function {
     @FXML
     protected void saveToFile(ActionEvent actionEvent) throws Exception{
         navigateFunction(actionEvent,"saveToFile.fxml");
+    }
+
+    @FXML
+    private TableColumn<DriverTable, String > driverUpdateAge;
+
+    @FXML
+    private TableColumn<DriverTable, String> driverUpdateCar;
+
+    @FXML
+    private TableColumn<DriverTable, String> driverUpdateName;
+
+    @FXML
+    private TableColumn<DriverTable, String> driverUpdatePoints;
+
+    @FXML
+    private TableView<DriverTable> driverUpdateTable;
+
+    @FXML
+    private TableColumn<DriverTable, String> driverUpdateTeam;
+
+    @FXML
+    private Button updateTableButton;
+
+    // Used to display driver details, in update driver scene
+    public void updateDriverTable() throws IOException {
+
+        // Using an observableList to display the data
+        ObservableList<DriverTable> list = FXCollections.observableArrayList();
+
+        // Reading a file line by line, adding data to a list and passing to the observableList
+        BufferedReader userFile = new BufferedReader(new FileReader("Racing.txt"));
+        String line = userFile.readLine();
+        while (line != null){
+            String [] driverData = {line.substring(0,20),line.substring(20,24),line.substring(24,44),
+                    line.substring(44,64),line.substring(64,79)};
+            list.add(new DriverTable(driverData[0],driverData[1],driverData[2],driverData[3],driverData[4]));
+            line = userFile.readLine();
+        }
+        userFile.close();
+
+        // columns in table-view
+        driverUpdateName.setCellValueFactory(new PropertyValueFactory<DriverTable,String>("driverName"));
+        driverUpdateAge.setCellValueFactory(new PropertyValueFactory<DriverTable,String>("driverAge"));
+        driverUpdateTeam.setCellValueFactory(new PropertyValueFactory<DriverTable,String>("driverTeam"));
+        driverUpdateCar.setCellValueFactory(new PropertyValueFactory<DriverTable,String>("driverCar"));
+        driverUpdatePoints.setCellValueFactory(new PropertyValueFactory<DriverTable,String>("driverPoints"));
+
+        driverUpdateTable.setItems(list);
+        updateTableButton.setDisable(true);
+
     }
 
     // Closing Program

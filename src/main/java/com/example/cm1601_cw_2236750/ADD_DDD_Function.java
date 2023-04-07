@@ -238,17 +238,17 @@ public class ADD_DDD_Function {
 
     // Defining GUI elements from the java FXMl file
     @FXML
-    private TableColumn<driverTable, String> driverAge;
+    private TableColumn<DriverTable, String> driverAge;
     @FXML
-    private TableColumn<driverTable, String> driverCar;
+    private TableColumn<DriverTable, String> driverCar;
     @FXML
-    private TableView<driverTable> driverDeleteTable;
+    private TableView<DriverTable> driverDeleteTable;
     @FXML
-    private TableColumn<driverTable, String> driverName;
+    private TableColumn<DriverTable, String> driverName;
     @FXML
-    private TableColumn<driverTable, String> driverPoints;
+    private TableColumn<DriverTable, String> driverPoints;
     @FXML
-    private TableColumn<driverTable, String> driverTeam;
+    private TableColumn<DriverTable, String> driverTeam;
     @FXML
     private Button displayTableDelete;
 
@@ -256,7 +256,7 @@ public class ADD_DDD_Function {
     public void deleteTableDisplay() throws IOException {
 
         // Using an observableList to display the data
-        ObservableList<driverTable> list = FXCollections.observableArrayList();
+        ObservableList<DriverTable> list = FXCollections.observableArrayList();
 
         // Reading a file line by line, adding data to a list and passing to the observableList
         BufferedReader userFile = new BufferedReader(new FileReader("Racing.txt"));
@@ -264,17 +264,17 @@ public class ADD_DDD_Function {
         while (line != null){
             String [] driverData = {line.substring(0,20),line.substring(20,24),line.substring(24,44),
                     line.substring(44,64),line.substring(64,79)};
-            list.add(new driverTable(driverData[0],driverData[1],driverData[2],driverData[3],driverData[4]));
+            list.add(new DriverTable(driverData[0],driverData[1],driverData[2],driverData[3],driverData[4]));
             line = userFile.readLine();
         }
         userFile.close();
 
         // columns in table-view
-        driverName.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverName"));
-        driverAge.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverAge"));
-        driverTeam.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverTeam"));
-        driverCar.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverCar"));
-        driverPoints.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverPoints"));
+        driverName.setCellValueFactory(new PropertyValueFactory<DriverTable,String>("driverName"));
+        driverAge.setCellValueFactory(new PropertyValueFactory<DriverTable,String>("driverAge"));
+        driverTeam.setCellValueFactory(new PropertyValueFactory<DriverTable,String>("driverTeam"));
+        driverCar.setCellValueFactory(new PropertyValueFactory<DriverTable,String>("driverCar"));
+        driverPoints.setCellValueFactory(new PropertyValueFactory<DriverTable,String>("driverPoints"));
 
         driverDeleteTable.setItems(list);
         displayTableDelete.setDisable(true);
