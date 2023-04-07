@@ -49,7 +49,7 @@
                   <TableColumn fx:id="driverPoints" prefWidth="63.20001220703125" text="Points" />
                </columns>
             </TableView>
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="230.0" layoutY="291.0" mnemonicParsing="false" onAction="#deleteTableDisplay" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: red;" styleClass="functions" stylesheets="@Style.css" text="Display Drivers">
+            <Button fx:id="displayTableDelete" alignment="CENTER" contentDisplay="CENTER" layoutX="230.0" layoutY="291.0" mnemonicParsing="false" onAction="#deleteTableDisplay" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: red;" styleClass="functions" stylesheets="@Style.css" text="Display Drivers">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>

@@ -1,171 +1,18 @@
 Date              Location
-2023-11-26        Nyirad
+2023-10-21        Riga
 Driver Name     Current Points        Position
-hhtht               70                   1
-vsdvs               54                   2
-bababa              39                   3
-fsfdd               489                  4
-ewfwe               419                  5
-f44454              52                   6
-bnmh                469                  7
-wefw                437                  8
-wsgdfg              23                   9
-gan                 613                  10
-harow               415                  11
+indi thosm          466                  1
+Mad ridepl          64                   2
+mssk                505                  3
+Harow               23                   4
+Csdojo              100                  5
 
 Date              Location
-2023-07-27        Riga
+2023-07-04        Montalegre
 Driver Name     Current Points        Position
-f44454              62                   1
-wsgdfg              30                   2
-fsfdd               494                  3
-Csdojo              69                   4
-hhtht               70                   5
-ewfwe               419                  6
-vsdvs               54                   7
-Haroon pro          415                  8
-bnmh                469                  9
-gan                 613                  10
-wefw                437                  11
-
-Date              Location
-2023-09-19        Holjes
-Driver Name     Current Points        Position
-f44454              72                   1
-Haroon pro          422                  2
-wefw                442                  3
-vsdvs               54                   4
-gan                 613                  5
-hhtht               70                   6
-fsfdd               494                  7
-Csdojo              69                   8
-bnmh                469                  9
-wsgdfg              30                   10
-ewfwe               419                  11
-
-Date              Location
-2023-06-18        Barcelona
-Driver Name     Current Points        Position
-kan                 623                  1
-wefw                449                  2
-wsgdfg              35                   3
-ewfwe               419                  4
-fsfdd               494                  5
-Haroon pro          422                  6
-greeg               23                   7
-f44454              72                   8
-hhtht               70                   9
-vsdvs               54                   10
-Csdojo              69                   11
-
-Date              Location
-2023-05-05        Barcelona
-Driver Name     Current Points        Position
-wefw                459                  1
-fsfdd               501                  2
-ewfwe               424                  3
-greeg               23                   4
-hhtht               70                   5
-vsdvs               54                   6
-f44454              72                   7
-Csdojo              69                   8
-kan                 623                  9
-wsgdfg              35                   10
-Haroon pro          422                  11
-
-Date              Location
-2023-02-02        Riga
-Driver Name     Current Points        Position
-vsdvs               64                   1
-fsfdd               508                  2
-f44454              77                   3
-wsgdfg              35                   4
-ewfwe               424                  5
-Haroon pro          422                  6
-hhtht               70                   7
-kan                 623                  8
-wefw                459                  9
-Csdojo              69                   10
-greeg               23                   11
-
-Date              Location
-2023-06-01        Holjes
-Driver Name     Current Points        Position
-vsdvs               74                   1
-hhtht               77                   2
-wefw                464                  3
-Csdojo              69                   4
-wsgdfg              35                   5
-greeg               23                   6
-f44454              77                   7
-fsfdd               508                  8
-Haroon pro          422                  9
-kan                 623                  10
-ewfwe               424                  11
-
-Date              Location
-2023-08-13        Norway
-Driver Name     Current Points        Position
-greeg               33                   1
-wefw                471                  2
-wsgdfg              40                   3
-Csdojo              69                   4
-vsdvs               74                   5
-f44454              77                   6
-Haroon pro          422                  7
-ewfwe               424                  8
-fsfdd               508                  9
-kan                 623                  10
-hhtht               77                   11
-
-Date              Location
-2023-01-22        Barcelona
-Driver Name     Current Points        Position
-fsfdd               518                  1
-ewfwe               431                  2
-wefw                476                  3
-vsdvs               74                   4
-fefefe              355                  5
-hhtht               77                   6
-greeg               33                   7
-Haroon pro          422                  8
-Csdojo              69                   9
-
-Date              Location
-2023-05-12        Montalegre
-Driver Name     Current Points        Position
-vsdvs               84                   1
-Csdojo              76                   2
-hhtht               82                   3
-Mad ridepl          30                   4
-indi thosm          422                  5
-fsfdd               518                  6
-wefw                476                  7
-ewfwe               431                  8
-greeg               33                   9
-
-Date              Location
-2023-06-26        Montalegre
-Driver Name     Current Points        Position
-vsdvs               94                   1
-greeg               40                   2
-fsfdd               523                  3
-indi thosm          422                  4
-ewfwe               431                  5
-Csdojo              76                   6
-Mad ridepl          30                   7
-hhtht               82                   8
-wefw                476                  9
-
-Date              Location
-2023-11-14        Riga
-Driver Name     Current Points        Position
-indi thosm          432                  1
-hhtht               89                   2
-greeg               45                   3
-fsfdd               523                  4
-ewfwe               431                  5
-Mad ridepl          30                   6
-wefwe               476                  7
-Csdojo              76                   8
+Mad ridepl          74                   1
+Csdojo              107                  2
+indi thosm          471                  3
+mssk                505                  4
+Harow               23                   5
 

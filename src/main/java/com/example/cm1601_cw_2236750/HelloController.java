@@ -630,7 +630,7 @@ public class HelloController{
     }
 
     // called when delete driver button is clicked
-    public void deleteADriver(){
+    public void deleteADriver() throws IOException {
 
         // prompt is set
         promptDelete.setText("                        ");
@@ -686,6 +686,7 @@ public class HelloController{
             deleteADriver.deleteDriver();
             promptDelete.setText("Driver deleted!");
             driverToDelete.clear();
+            deleteTableDisplay();
         }
     }
 
@@ -725,9 +726,14 @@ public class HelloController{
         stage.show();
     }
 
+
+    @FXML
+    private TextArea raceSimulated;
+
     // Called when simulate races button is clicked
     public void simulateRaces(){
 
+        raceSimulated.clear();
         // prompt is set
         racesPrompt.setText("             Race was Simulated!");
 
@@ -735,13 +741,21 @@ public class HelloController{
         Races simulateRaces = new Races();
 
         // .simulateRace is called
-        simulateRaces.simulateRace();
+        String raceData = simulateRaces.simulateRace();
+        displayRace(raceData);
 
         // alert box displayed
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText("A Race was Simulated!");
         alert.showAndWait();
 
+    }
+    public void displayRace(String raceData){
+        String raceSimulatedData =
+                raceData.replaceAll(" {2,}(?!\\n)", "   |   ") + "\n";
+
+        raceSimulated.appendText(raceSimulatedData);
+        raceSimulated.setWrapText(true);
     }
 
     // loading racesSummary scene
@@ -904,6 +918,9 @@ public class HelloController{
     @FXML
     private TableColumn<driverTable, String> driverTeam;
 
+    @FXML
+    private Button displayTableDelete;
+
     public void deleteTableDisplay() throws IOException {
         ObservableList<driverTable> list =FXCollections.observableArrayList();
 
@@ -924,6 +941,7 @@ public class HelloController{
         driverPoints.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverPoints"));
 
         driverDeleteTable.setItems(list);
+        displayTableDelete.setDisable(true);
 
     }
 

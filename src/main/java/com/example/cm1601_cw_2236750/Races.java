@@ -46,7 +46,7 @@ public class Races {
     }
 
     // Simulates the race.
-    public void simulateRace(){
+    public String simulateRace(){
         String [] locations = {"Nyirad","Holjes","Montalegre","Barcelona","Riga","Norway"};
 
         // Instance to get random integers for the date
@@ -101,5 +101,6 @@ public class Races {
         CreateFile racesSummary = new CreateFile("RaceSummary.txt",writeToFile);
         racesSummary.createAndWrite();
 
+        return writeToFile;
     }
 }
