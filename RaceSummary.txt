@@ -1,113 +1,27 @@
 Date              Location
-2023-10-21        Riga
+2023-09-24        Nyirad
 Driver Name     Current Points        Position
-indi thosm          466                  1
-Mad ridepl          64                   2
-mssk                505                  3
-Harow               23                   4
-Csdojo              100                  5
+Mad ridepl          105                  1
+gamerG              85                   2
+kotasfv             74                   3
+Trent               84                   4
+ukod mdmd           35                   5
 
 Date              Location
-2023-07-04        Montalegre
+2023-02-27        Holjes
 Driver Name     Current Points        Position
-Mad ridepl          74                   1
-Csdojo              107                  2
-indi thosm          471                  3
-mssk                505                  4
-Harow               23                   5
+ukod mdmd           45                   1
+Mad ridepl          112                  2
+kotasfv             79                   3
+Trent               84                   4
+gamerG              85                   5
 
 Date              Location
-2023-02-24        Montalegre
+2023-08-25        Holjes
 Driver Name     Current Points        Position
-indi thosm          481                  1
-Mad ridepl          81                   2
-Trent               82                   3
-Harow               23                   4
-mssk                505                  5
-
-Date              Location
-2023-07-11        Riga
-Driver Name     Current Points        Position
-Trent               92                   1
-mssk                512                  2
-indi thosm          486                  3
-Mad ridepl          81                   4
-Harow               23                   5
-
-Date              Location
-2023-04-10        Norway
-Driver Name     Current Points        Position
-Harow               33                   1
-Trent               99                   2
-mssk                517                  3
-Mad ridepl          81                   4
-indi thosm          486                  5
-
-Date              Location
-2023-11-15        Montalegre
-Driver Name     Current Points        Position
-Harow               43                   1
-pakaya              41                   2
-mssk                522                  3
-indi thosm          486                  4
-Mad ridepl          81                   5
-Trent               99                   6
-
-Date              Location
-2023-06-16        Norway
-Driver Name     Current Points        Position
-Trent               109                  1
-mssk                529                  2
-indi thosm          491                  3
-Harow               43                   4
-Mad ridepl          81                   5
-pakaya              41                   6
-
-Date              Location
-2023-11-02        Riga
-Driver Name     Current Points        Position
-Harow               53                   1
-Mad ridepl          88                   2
-RB                  114                  3
-pakaya              41                   4
-indi thosm          491                  5
-
-Date              Location
-2023-08-15        Norway
-Driver Name     Current Points        Position
-indi thosm          501                  1
-Mad ridepl          95                   2
-Harow               58                   3
-pakaya              41                   4
-RB                  114                  5
-
-Date              Location
-2023-08-08        Nyirad
-Driver Name     Current Points        Position
-Harow               68                   1
-kariya              63                   2
-kota                49                   3
-hukene dial         45                   4
-indi thosm          501                  5
-kotasfv             54                   6
-cariya ma           34                   7
-Trent               0                    8
-ukod mdmd           35                   9
-Mad ridepl          95                   10
-pakaya              41                   11
-
-Date              Location
-2023-10-09        Nyirad
-Driver Name     Current Points        Position
-kotasfv             64                   1
-kota                56                   2
-cariya ma           39                   3
-Harow               68                   4
-indi thosm          501                  5
-Trent               0                    6
-hukene dial         45                   7
-ukod mdmd           35                   8
-pakaya              41                   9
-Mad ridepl          95                   10
-kariya              63                   11
+Trent               94                   1
+Mad ridepl          119                  2
+ukod mdmd           50                   3
+kotasfv             79                   4
+gamerG              85                   5
 
