@@ -43,3 +43,41 @@ mssk                517                  3
 Mad ridepl          81                   4
 indi thosm          486                  5
 
+Date              Location
+2023-11-15        Montalegre
+Driver Name     Current Points        Position
+Harow               43                   1
+pakaya              41                   2
+mssk                522                  3
+indi thosm          486                  4
+Mad ridepl          81                   5
+Trent               99                   6
+
+Date              Location
+2023-06-16        Norway
+Driver Name     Current Points        Position
+Trent               109                  1
+mssk                529                  2
+indi thosm          491                  3
+Harow               43                   4
+Mad ridepl          81                   5
+pakaya              41                   6
+
+Date              Location
+2023-11-02        Riga
+Driver Name     Current Points        Position
+Harow               53                   1
+Mad ridepl          88                   2
+RB                  114                  3
+pakaya              41                   4
+indi thosm          491                  5
+
+Date              Location
+2023-08-15        Norway
+Driver Name     Current Points        Position
+indi thosm          501                  1
+Mad ridepl          95                   2
+Harow               58                   3
+pakaya              41                   4
+RB                  114                  5
+

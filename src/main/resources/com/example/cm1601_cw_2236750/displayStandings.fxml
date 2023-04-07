@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="471.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cm1601_cw_2236750.HelloController">
+<AnchorPane prefHeight="471.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cm1601_cw_2236750.VCT_Function">
    <children>
       <AnchorPane prefHeight="74.0" prefWidth="600.0" style="-fx-background-color: black;" />
       <Label layoutX="33.0" layoutY="24.0" prefHeight="30.0" prefWidth="418.0" style="-fx-background-color: black;" text="Driver Standings :" textFill="#ef2323">
