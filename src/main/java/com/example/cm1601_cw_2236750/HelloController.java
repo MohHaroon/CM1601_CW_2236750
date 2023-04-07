@@ -34,6 +34,7 @@ public class HelloController{
         stage.show();
     }
 
+    // Defining GUI elements from the java FXMl file
     @FXML
     private TextField addDriverName;
     @FXML
@@ -205,6 +206,7 @@ public class HelloController{
 
         }}
 
+    // Defining GUI elements from the java FXMl file
     @FXML
     private TextField newData;
     @FXML
@@ -615,6 +617,7 @@ public class HelloController{
         }
     }
 
+    // Defining GUI elements from the java FXMl file
     @FXML
     private Label promptDelete;
     @FXML
@@ -699,6 +702,7 @@ public class HelloController{
         stage.show();
     }
 
+    // Defining GUI elements from the java FXMl file
     @FXML
     private TextArea position;
     @FXML
@@ -726,7 +730,7 @@ public class HelloController{
         stage.show();
     }
 
-
+    // Defining GUI elements from the java FXMl file
     @FXML
     private TextArea raceSimulated;
 
@@ -740,8 +744,10 @@ public class HelloController{
         // Creating instance
         Races simulateRaces = new Races();
 
-        // .simulateRace is called
+        // .simulateRace is called and the details of the race simulated is passed to a variable
         String raceData = simulateRaces.simulateRace();
+
+        // Calling function to append data to the text area
         displayRace(raceData);
 
         // alert box displayed
@@ -750,6 +756,8 @@ public class HelloController{
         alert.showAndWait();
 
     }
+
+    // Used to append to the text area after simulating a race
     public void displayRace(String raceData){
         String raceSimulatedData =
                 raceData.replaceAll(" {2,}(?!\\n)", "   |   ") + "\n";
@@ -767,6 +775,7 @@ public class HelloController{
         stage.show();
     }
 
+    // Defining GUI elements from the java FXMl file
     @FXML
     private TextArea racesSummary;
     @FXML
@@ -791,6 +800,7 @@ public class HelloController{
         stage.show();
     }
 
+    // Defining GUI elements from the java FXMl file
     @FXML
     private TextField userFileName;
     @FXML
@@ -832,28 +842,19 @@ public class HelloController{
 
     }
 
-
+    // Defining GUI elements from the java FXMl file
     @FXML
     private TableColumn<driverTable, String> dAge;
-
     @FXML
     private TableColumn<driverTable, String> dCar;
-
     @FXML
     private TableColumn<driverTable, String> dName;
-
     @FXML
     private TableColumn<driverTable, String> dPoints;
-
     @FXML
     private TableColumn<driverTable, String> dTeam;
-
-    @FXML
-    private Button fileDisplay;
-
     @FXML
     private TableView<driverTable> fileTable;
-
 
     // called when display file button s clicked
     public void displayFileData() throws IOException {
@@ -905,6 +906,7 @@ public class HelloController{
         }
     }
 
+    // Defining GUI elements from the java FXMl file
     @FXML
     private TableColumn<driverTable, String> driverAge;
     @FXML
@@ -917,13 +919,16 @@ public class HelloController{
     private TableColumn<driverTable, String> driverPoints;
     @FXML
     private TableColumn<driverTable, String> driverTeam;
-
     @FXML
     private Button displayTableDelete;
 
+    // Used to display driver details, in delete driver scene
     public void deleteTableDisplay() throws IOException {
+
+        // Using an observableList to display the data
         ObservableList<driverTable> list =FXCollections.observableArrayList();
 
+        // Reading a file line by line, adding data to a list and passing to the observableList
         BufferedReader userFile = new BufferedReader(new FileReader("Racing.txt"));
         String line = userFile.readLine();
         while (line != null){
@@ -934,6 +939,7 @@ public class HelloController{
         }
         userFile.close();
 
+        // columns in table-view
         driverName.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverName"));
         driverAge.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverAge"));
         driverTeam.setCellValueFactory(new PropertyValueFactory<driverTable,String>("driverTeam"));

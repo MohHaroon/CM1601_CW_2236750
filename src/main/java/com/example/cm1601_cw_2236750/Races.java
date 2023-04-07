@@ -101,6 +101,7 @@ public class Races {
         CreateFile racesSummary = new CreateFile("RaceSummary.txt",writeToFile);
         racesSummary.createAndWrite();
 
+        // Details of race simulated is returned, to append to a text area
         return writeToFile;
     }
 }
