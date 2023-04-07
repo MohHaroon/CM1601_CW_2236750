@@ -33,6 +33,8 @@ public class ADD_DDD_Function {
     @FXML
     private Label prompt;
 
+    AlertErrors alert = new AlertErrors();
+
     // Called when the addDriver button is clicked
     public void addDriverData(){
 
@@ -54,11 +56,8 @@ public class ADD_DDD_Function {
                 throw new Exception();
             }
         }catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Data Entry");
-            alert.setContentText("Make sure all fields have been filled!");
-            alert.showAndWait();
+            alert.errorAlert("Error","Error in Data Entry"
+                    ,"Make sure all fields have been filled!");
         }
 
         // Validating the driver name, if there is an error, an error message is alerted and the field is cleared
@@ -72,21 +71,14 @@ public class ADD_DDD_Function {
             }
 
         } catch(NullPointerException e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver name");
-            alert.setContentText("Driver already exists!");
-            alert.showAndWait();
+            alert.errorAlert("Error","Error in Driver name"
+                    ,"Driver already exists!");
             addDriverName.clear();
         }
         catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver name");
-            alert.setContentText("Make sure the driver's name length is within 20 letters!");
-            alert.showAndWait();
+            alert.errorAlert("Error","Error in Driver name"
+                    ,"Make sure the driver's name length is within 20 letters!");
             addDriverName.clear();
-
         }
 
         // Validating the driver age, if there is an error, an error message is alerted and the field is cleared
@@ -100,14 +92,9 @@ public class ADD_DDD_Function {
             }
 
         } catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver age");
-            alert.setContentText("Make sure the age is a number, and is between 18-55!");
-
-            alert.showAndWait();
+            alert.errorAlert("Error","Error in Driver age"
+                    ,"Make sure the age is a number, and is between 18-55!");
             addDriverAge.clear();
-
         }
 
         // Validating the driver Team, if there is an error, an error message is alerted and the field is cleared
@@ -117,13 +104,9 @@ public class ADD_DDD_Function {
                 throw new  Exception();}
 
         } catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver's team name");
-            alert.setContentText("Make sure the team name length is within 20 letters!");
-            alert.showAndWait();
+            alert.errorAlert("Error","Error in Driver's team name"
+                    ,"Make sure the team name length is within 20 letters!");
             addDriverTeamName.clear();
-
         }
 
         // Validating the driver Car type, if there is an error, an error message is alerted and the field is cleared
@@ -133,13 +116,9 @@ public class ADD_DDD_Function {
                 throw new  Exception();}
 
         } catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver's Car type");
-            alert.setContentText("Make sure the car type length is within 20 letters!");
-            alert.showAndWait();
+            alert.errorAlert("Error","Error in Driver's Car type"
+                    ,"Make sure the car type length is within 20 letters!");
             addDriverCarType.clear();
-
         }
 
         // Validating the driver's points, if there is an error, an error message is alerted and the field is cleared
@@ -149,13 +128,9 @@ public class ADD_DDD_Function {
                 throw new  Exception();}
 
         } catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver's current points");
-            alert.setContentText("Make sure entered current points is a number!");
-            alert.showAndWait();
+            alert.errorAlert("Error","Error in Driver's current points"
+                    ,"Make sure entered current points is a number!");
             addDriverCurrentPoints.clear();
-
         }
 
         // if none of the fields are empty, driver data is added.
@@ -172,6 +147,9 @@ public class ADD_DDD_Function {
 
             // prompt is set in the GUI
             prompt.setText("Driver added Successfully!");
+            alert.infoAlert(   "Driver Added","Driver Details"
+                    ,"Driver "+driverName.strip()+" aged "+driverAge.strip()+" of team "+driverTeamName.strip()
+            +" driving a "+ driverCarType.strip()+ " with " + driverCurrentPoints.strip() +" points was added!");
 
             // All the text-fields are cleared.
             addDriverName.clear();
@@ -203,11 +181,8 @@ public class ADD_DDD_Function {
                 throw new IOException();
             }
         } catch (IOException e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver name");
-            alert.setContentText("Input Driver name!");
-            alert.showAndWait();
+            alert.errorAlert("Error","Error in Driver name"
+                    ,"Input Driver name!");
         }
 
         // Validating the driver name, if there is an error, an error message is alerted and the field is cleared
@@ -223,19 +198,13 @@ public class ADD_DDD_Function {
             }
         }
         catch(NullPointerException e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver name");
-            alert.setContentText("Driver doesn't exist!");
-            alert.showAndWait();
+            alert.errorAlert("Error","Error in Driver name"
+                    ,"Driver doesn't exist!");
             driverToDelete.clear();
         }
         catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver name");
-            alert.setContentText("Make sure the driver's name length is within 20 letters!");
-            alert.showAndWait();
+            alert.errorAlert("Error","Error in Driver name"
+                    ,"Make sure the driver's name length is within 20 letters!");
             driverToDelete.clear();
         }
 
@@ -312,6 +281,7 @@ public class ADD_DDD_Function {
 
     }
 
+    // Closing Program
     public void closeProgram(ActionEvent event) {
         System.exit(0);
     }

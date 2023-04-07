@@ -48,16 +48,19 @@ public class VCT_Function {
         stage.show();
     }
 
+    // Loading racing.fxml file
     @FXML
     protected void mainScene(ActionEvent actionEvent) throws Exception{
         navigateFunction(actionEvent,"racing.fxml");
     }
 
+    // Loading saveToFile.fxml file
     @FXML
     protected void saveToFile(ActionEvent actionEvent) throws Exception{
         navigateFunction(actionEvent,"saveToFile.fxml");
     }
 
+    // Closing Program
     public void closeProgram(ActionEvent event) {
         System.exit(0);
     }

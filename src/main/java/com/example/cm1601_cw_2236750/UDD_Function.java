@@ -6,7 +6,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -24,6 +23,8 @@ public class UDD_Function {
     @FXML
     private Label promptUpdate;
 
+    AlertErrors errorAlert = new AlertErrors();
+
     // Called when the update driver name is clicked
     public void updateDriverName(){
 
@@ -40,11 +41,8 @@ public class UDD_Function {
                 throw new Exception();
             }
         }catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Data Entry");
-            alert.setContentText("Make sure all fields have been filled!");
-            alert.showAndWait();
+            errorAlert.errorAlert("Error","Error in Data Entry"
+                    ,"Make sure all fields have been filled!");
         }
 
         // Validating the driver name, if there is an error, an error message is alerted and the field is cleared
@@ -58,19 +56,13 @@ public class UDD_Function {
             }
 
         } catch(NullPointerException e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver name");
-            alert.setContentText("Driver doesn't exists!");
-            alert.showAndWait();
+            errorAlert.errorAlert("Error","Error in Driver name"
+                    ,"Driver doesn't exist!");
             driverToUpdate.clear();
         }
         catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver name");
-            alert.setContentText("Make sure the driver's name length is within 20 letters!");
-            alert.showAndWait();
+            errorAlert.errorAlert("Error","Error in Driver name"
+                    ,"Make sure the driver's name length is within 20 letters!");
             driverToUpdate.clear();
         }
 
@@ -85,19 +77,13 @@ public class UDD_Function {
             }
 
         } catch(NullPointerException e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver name");
-            alert.setContentText("Driver already exists!");
-            alert.showAndWait();
+            errorAlert.errorAlert("Error","Error in Driver name"
+                    ,"Driver already exists!");
             newData.clear();
         }
         catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver name");
-            alert.setContentText("Make sure the driver's name length is within 20 letters!");
-            alert.showAndWait();
+            errorAlert.errorAlert("Error","Error in Driver name"
+                    ,"Make sure the driver's name length is within 20 letters!");
             newData.clear();
         }
 
@@ -109,7 +95,6 @@ public class UDD_Function {
             newData.clear();
             driverToUpdate.clear();
         }
-
     }
 
     // Called when driver age needs to be updated
@@ -128,11 +113,8 @@ public class UDD_Function {
                 throw new Exception();
             }
         }catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Data Entry");
-            alert.setContentText("Make sure all fields have been filled!");
-            alert.showAndWait();
+            errorAlert.errorAlert("Error","Error in Data Entry"
+                    ,"Make sure all fields have been filled!");
         }
 
         // Validating the driver name, if there is an error, an error message is alerted and the field is cleared
@@ -146,19 +128,13 @@ public class UDD_Function {
             }
 
         } catch(NullPointerException e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver name");
-            alert.setContentText("Driver doesn't exists!");
-            alert.showAndWait();
+            errorAlert.errorAlert("Error","Error in Driver name"
+                    ,"Driver doesn't exist!");
             driverToUpdate.clear();
         }
         catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver name");
-            alert.setContentText("Make sure the driver's name length is within 20 letters!");
-            alert.showAndWait();
+            errorAlert.errorAlert("Error","Error in Driver name"
+                    ,"Make sure the driver's name length is within 20 letters!");
             driverToUpdate.clear();
         }
 
@@ -173,12 +149,8 @@ public class UDD_Function {
             }
 
         } catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver age");
-            alert.setContentText("Make sure the age is a number, and is between 18-55!");
-
-            alert.showAndWait();
+            errorAlert.errorAlert("Error","Error in Driver age"
+                    ,"Make sure the age is a number, and is between 18-55!");
             newData.clear();
 
         }
@@ -209,11 +181,8 @@ public class UDD_Function {
                 throw new Exception();
             }
         }catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Data Entry");
-            alert.setContentText("Make sure all fields have been filled!");
-            alert.showAndWait();
+            errorAlert.errorAlert("Error","Error in Data Entry"
+                    ,"Make sure all fields have been filled!");
         }
 
         // Validating the driver name, if there is an error, an error message is alerted and the field is cleared
@@ -227,19 +196,13 @@ public class UDD_Function {
             }
 
         } catch(NullPointerException e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver name");
-            alert.setContentText("Driver doesn't exists!");
-            alert.showAndWait();
+            errorAlert.errorAlert("Error","Error in Driver name"
+                    ,"Driver doesn't exist!");
             driverToUpdate.clear();
         }
         catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver name");
-            alert.setContentText("Make sure the driver's name length is within 20 letters!");
-            alert.showAndWait();
+            errorAlert.errorAlert("Error","Error in Driver name"
+                    ,"Make sure the driver's name length is within 20 letters!");
             driverToUpdate.clear();
         }
 
@@ -250,11 +213,8 @@ public class UDD_Function {
                 throw new  Exception();}
 
         } catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver's team name");
-            alert.setContentText("Make sure the team name length is within 20 letters!");
-            alert.showAndWait();
+            errorAlert.errorAlert("Error","Error in Driver's team name"
+                    ,"Make sure the team name length is within 20 letters!");
             newData.clear();
 
         }
@@ -284,11 +244,8 @@ public class UDD_Function {
                 throw new Exception();
             }
         }catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Data Entry");
-            alert.setContentText("Make sure all fields have been filled!");
-            alert.showAndWait();
+            errorAlert.errorAlert("Error","Error in Data Entry"
+                    ,"Make sure all fields have been filled!");
         }
 
         // Validating the driver name, if there is an error, an error message is alerted and the field is cleared
@@ -302,19 +259,13 @@ public class UDD_Function {
             }
 
         } catch(NullPointerException e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver name");
-            alert.setContentText("Driver doesn't exists!");
-            alert.showAndWait();
+            errorAlert.errorAlert("Error","Error in Driver name"
+                    ,"Driver doesn't exist!");
             driverToUpdate.clear();
         }
         catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver name");
-            alert.setContentText("Make sure the driver's name length is within 20 letters!");
-            alert.showAndWait();
+            errorAlert.errorAlert("Error","Error in Driver name"
+                    ,"Make sure the driver's name length is within 20 letters!");
             driverToUpdate.clear();
         }
 
@@ -325,11 +276,8 @@ public class UDD_Function {
                 throw new  Exception();}
 
         } catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver's team name");
-            alert.setContentText("Make sure the car type length is within 20 letters!");
-            alert.showAndWait();
+            errorAlert.errorAlert("Error","Error in Driver's Car type"
+                    ,"Make sure the car type length is within 20 letters!");
             newData.clear();
 
         }
@@ -358,11 +306,8 @@ public class UDD_Function {
                 throw new Exception();
             }
         }catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Data Entry");
-            alert.setContentText("Make sure all fields have been filled!");
-            alert.showAndWait();
+            errorAlert.errorAlert("Error","Error in Data Entry"
+                    ,"Make sure all fields have been filled!");
         }
 
         // Validating the driver name, if there is an error, an error message is alerted and the field is cleared
@@ -376,19 +321,13 @@ public class UDD_Function {
             }
 
         } catch(NullPointerException e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver name");
-            alert.setContentText("Driver doesn't exists!");
-            alert.showAndWait();
+            errorAlert.errorAlert("Error","Error in Driver name"
+                    ,"Driver doesn't exist!");
             driverToUpdate.clear();
         }
         catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Driver name");
-            alert.setContentText("Make sure the driver name length is within 20 letters!");
-            alert.showAndWait();
+            errorAlert.errorAlert("Error","Error in Driver name"
+                    ,"Make sure the driver's name length is within 20 letters!");
             driverToUpdate.clear();
         }
 
@@ -399,13 +338,9 @@ public class UDD_Function {
                 throw new  Exception();}
 
         } catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in Current Points");
-            alert.setContentText("Make sure the current points length is an integer within 20 letters!");
-            alert.showAndWait();
+            errorAlert.errorAlert("Error","Error in Driver's current points"
+                    ,"Make sure entered current points is a number!");
             newData.clear();
-
         }
 
         // if fields are not empty, data is updated and the fields are cleared.
@@ -431,16 +366,19 @@ public class UDD_Function {
         stage.show();
     }
 
+    // Loading racing.fxml file
     @FXML
     protected void mainScene(ActionEvent actionEvent) throws Exception{
         navigateFunction(actionEvent,"racing.fxml");
     }
 
+    // Loading saveToFile.fxml file
     @FXML
     protected void saveToFile(ActionEvent actionEvent) throws Exception{
         navigateFunction(actionEvent,"saveToFile.fxml");
     }
 
+    // Closing Program
     public void closeProgram(ActionEvent event) {
         System.exit(0);
     }

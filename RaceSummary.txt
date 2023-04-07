@@ -81,3 +81,33 @@ Harow               58                   3
 pakaya              41                   4
 RB                  114                  5
 
+Date              Location
+2023-08-08        Nyirad
+Driver Name     Current Points        Position
+Harow               68                   1
+kariya              63                   2
+kota                49                   3
+hukene dial         45                   4
+indi thosm          501                  5
+kotasfv             54                   6
+cariya ma           34                   7
+Trent               0                    8
+ukod mdmd           35                   9
+Mad ridepl          95                   10
+pakaya              41                   11
+
+Date              Location
+2023-10-09        Nyirad
+Driver Name     Current Points        Position
+kotasfv             64                   1
+kota                56                   2
+cariya ma           39                   3
+Harow               68                   4
+indi thosm          501                  5
+Trent               0                    6
+hukene dial         45                   7
+ukod mdmd           35                   8
+pakaya              41                   9
+Mad ridepl          95                   10
+kariya              63                   11
+

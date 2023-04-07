@@ -27,6 +27,8 @@ public class STF_RFF_Function {
     @FXML
     private TextField fileToDisplay;
 
+    AlertErrors errorAlert = new AlertErrors();
+
     // Called when save file button is clicked
     public void saveFile(){
 
@@ -40,11 +42,8 @@ public class STF_RFF_Function {
             }
             fileName = userFileName.getText() + ".txt";
         } catch (IOException e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in File name");
-            alert.setContentText("Enter a name!");
-            alert.showAndWait();
+            errorAlert.errorAlert("Error","Error in File name"
+                    ,"Enter a name!");
         }
 
         // if fields is not empty, data is saved to file and text field is cleared
@@ -93,11 +92,8 @@ public class STF_RFF_Function {
 
         } catch (Exception e){
             fileToDisplay.clear();
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Error in File name");
-            alert.setContentText("Enter a name; of a file that exists!");
-            alert.showAndWait();
+            errorAlert.errorAlert("Error","Error in File name"
+                    ,"Enter a name; of a file that exists!");
         }
 
         // if text field is not empty, data is displayed.
@@ -138,17 +134,19 @@ public class STF_RFF_Function {
         stage.show();
     }
 
+    // Loading updateDriver.fxml file
     @FXML
     protected void updateDriver(ActionEvent actionEvent) throws Exception{
         navigateFunction(actionEvent,"updateDriver.fxml");
     }
 
-
+    // Loading racing.fxml file
     @FXML
     protected void mainScene(ActionEvent actionEvent) throws Exception{
         navigateFunction(actionEvent,"racing.fxml");
     }
 
+    // Closing Program
     public void closeProgram(ActionEvent event) {
         System.exit(0);
     }
