@@ -220,7 +220,6 @@ public class ADD_DDD_Function {
 
     @FXML
     protected void mainScene(ActionEvent actionEvent) throws Exception{
-//        mainController.navigateFunction(actionEvent, "mainApplication-view.fxml", "World Rally Cross Application");
         navigateFunction(actionEvent);
     }
     public void navigateFunction(ActionEvent actionEvent) throws IOException {

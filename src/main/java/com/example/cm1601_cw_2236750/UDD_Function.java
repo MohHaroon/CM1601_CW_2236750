@@ -362,7 +362,7 @@ public class UDD_Function {
         }
     }
 
-    public void navigateFunction(ActionEvent actionEvent, String fileFXML) throws IOException {
+    public void navigateFunction(ActionEvent actionEvent, String fileFXML, int height) throws IOException {
         // Identifying and closing the previous stage
         Stage previousStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         previousStage.close();
@@ -370,7 +370,7 @@ public class UDD_Function {
         // Opening a new stage
         Stage stage = new Stage();
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fileFXML)));
-        stage.setScene(new Scene(root,620,500));
+        stage.setScene(new Scene(root,620,height));
         stage.setTitle("World rally cross championship management system");
         stage.show();
     }
@@ -378,33 +378,28 @@ public class UDD_Function {
     // Loading racing.fxml file
     @FXML
     protected void mainScene(ActionEvent actionEvent) throws Exception{
-        navigateFunction(actionEvent,"racing.fxml");
+        navigateFunction(actionEvent,"racing.fxml",500);
     }
 
     // Loading saveToFile.fxml file
     @FXML
     protected void saveToFile(ActionEvent actionEvent) throws Exception{
-        navigateFunction(actionEvent,"saveToFile.fxml");
+        navigateFunction(actionEvent,"saveToFile.fxml",420);
     }
 
+    // Defining GUI elements from the java FXMl file
     @FXML
     private TableColumn<DriverTable, String > driverUpdateAge;
-
     @FXML
     private TableColumn<DriverTable, String> driverUpdateCar;
-
     @FXML
     private TableColumn<DriverTable, String> driverUpdateName;
-
     @FXML
     private TableColumn<DriverTable, String> driverUpdatePoints;
-
     @FXML
     private TableView<DriverTable> driverUpdateTable;
-
     @FXML
     private TableColumn<DriverTable, String> driverUpdateTeam;
-
     @FXML
     private Button updateTableButton;
 

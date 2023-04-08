@@ -121,7 +121,7 @@ public class STF_RFF_Function {
         }
     }
 
-    public void navigateFunction(ActionEvent actionEvent, String fileFXML) throws IOException {
+    public void navigateFunction(ActionEvent actionEvent, String fileFXML, int height) throws IOException {
         // Identifying and closing the previous stage
         Stage previousStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         previousStage.close();
@@ -129,20 +129,7 @@ public class STF_RFF_Function {
         // Opening a new stage
         Stage stage = new Stage();
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fileFXML)));
-        stage.setScene(new Scene(root,620,500));
-        stage.setTitle("World rally cross championship management system");
-        stage.show();
-    }
-
-    public void navigateFunctionFileDisplay(ActionEvent actionEvent, String fileFXML) throws IOException {
-        // Identifying and closing the previous stage
-        Stage previousStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-        previousStage.close();
-
-        // Opening a new stage
-        Stage stage = new Stage();
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fileFXML)));
-        stage.setScene(new Scene(root,620,570));
+        stage.setScene(new Scene(root,620,height));
         stage.setTitle("World rally cross championship management system");
         stage.show();
     }
@@ -150,19 +137,19 @@ public class STF_RFF_Function {
     // Loading updateDriver.fxml file
     @FXML
     protected void updateDriver(ActionEvent actionEvent) throws Exception{
-        navigateFunction(actionEvent,"updateDriver.fxml");
+        navigateFunction(actionEvent,"updateDriver.fxml",530);
     }
 
     // Loading racing.fxml file
     @FXML
     protected void mainScene(ActionEvent actionEvent) throws Exception{
-        navigateFunction(actionEvent,"racing.fxml");
+        navigateFunction(actionEvent,"racing.fxml",500);
     }
 
     // Loading displayFileScene.fxml file
     @FXML
     protected void displayFile(ActionEvent actionEvent) throws Exception{
-        navigateFunctionFileDisplay(actionEvent,"displayFileScene.fxml");
+        navigateFunction(actionEvent,"displayFileScene.fxml",570);
     }
 
     // Closing Program
